@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "arialregular";
+  src: url("/src/fonts/arial-webfont.woff2") format("woff2"),
+    url("/src/fonts/arial-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "amalfi_coastregular";
+  src: url("/src/fonts/amalfi_coast-webfont.woff2") format("woff2"),
+    url("/src/fonts/amalfi_coast-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.coral {
+  font-family: "arialregular";
+  font-weight: 600;
+}
+
+.print {
+  font-family: "amalfi_coastregular";
+  z-index: 1;
+}
+
+.front {
+  z-index: 3;
+}

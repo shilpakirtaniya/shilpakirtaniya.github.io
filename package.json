@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "name": "testing-html-and-code-section",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./styles.css -o ./src/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}

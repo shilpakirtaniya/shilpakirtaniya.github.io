@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "sunrollregular";
+  src: url("/src/fonts/sunroll-webfont.woff2") format("woff2"),
+    url("/src/fonts/sunroll-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "calibri";
+  src: url("/src/fonts/calibri-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "calibri";
+  src: url("/src/fonts/calibri-regular-webfont.woff2") format("woff2"),
+    url("/src/fonts/calibri-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "noto";
+  src: url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap");
+}
+
+.noto {
+  font-family: "noto";
+  font-weight: 100;
+}
+
+.calibri {
+  font-family: "calibri";
+}
+
+.sunroll {
+  font-family: "sunrollregular";
+}
+
+@layer base {
+  @font-face {
+    font-family: "display";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+  }
+}
+
+@font-face {
+  font-family: "edition";
+  src: url(src/fonts/EDITION_.TTF) format("ttf");
+}
+
+@font-face {
+  font-family: "noto";
+  font-style: normal;
+  font-weight: 100;
+
+  src: url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap");
+}
+
+.projects img {
+  transform: scale(1.05); /* increase the size of the image */
+  transition: transform 150ms ease-in-out; /* smooth transition */
+}
+
+.project img {
+  transform: scale(1.4);
+  transition: transform 150ms ease-in-out; /* smooth transition */
+}
+
+.project:hover img {
+  transform: scale(1.3); /* return the image to its original size */
+  filter: brightness(70%); /* apply grayscale filter */
+}
+
+.project h1,
+.project h3 {
+  opacity: 0; /* hide the text by default */
+  transition: opacity 150ms ease-in-out; /* smooth transition */
+}
+
+.project:hover h1,
+.project:hover h3 {
+  opacity: 1; /* show the text on hover */
+}
+
+.projects:hover img {
+  transform: scale(1); /* return the image to its original size */
+  filter: brightness(70%); /* apply grayscale filter */
+}
+
+.projects h1,
+.projects h3 {
+  opacity: 0; /* hide the text by default */
+  transition: opacity 150ms ease-in-out; /* smooth transition */
+}
+
+.projects:hover h1,
+.projects:hover h3 {
+  opacity: 1; /* show the text on hover */
+}
+
+.row {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 1fr)
+  ); /* Equivalent to grid-cols-3 */
+  place-items: center; /* Equivalent to place-items-evenly */
+}
+
+.active {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(
+    1,
+    minmax(0, 1fr)
+  ); /* Equivalent to grid-cols-1 */
+  place-items: center; /* Equivalent to place-items-evenly */
+}
+
+.header {
+  height: 100%;
+  width: 100%;
+}
+
+.header-active {
+  height: 20%;
+  width: 100%;
+}
+
+.animatedImages {
+  mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+}
+
+.scrollInner {
+  animation: scroll 40s linear infinite;
+}
+@keyframes scroll {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes text {
+  from {
+    transform: translateY(30px);
+  }
+}
+
+.icons:hover .textContent {
+  opacity: 1;
+  animation: text 0.5s ease-in-out;
+}
+
+.heroSection {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
