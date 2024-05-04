@@ -37,7 +37,8 @@ module.exports = {
           "url('/src/project/Social Media/page 1/background image.jpg')",
         vilasita: "url('/src/project/VILASITA/page 5/background image.png')",
         weddingHero: "url('/src/project/Wedding card/HERO IMAGE.png')",
-        mainHero: "url('')",
+        mainHero:
+          "url('/src/project/imges/heroImages/1-ux7OjOU39-transformed.png')",
       },
       keyframes: {
         scrollRight: {
