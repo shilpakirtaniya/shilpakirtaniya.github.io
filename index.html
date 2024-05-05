@@ -312,54 +312,55 @@
       const loader = document.getElementById("preloader");
       window.addEventListener("load", function () {
         loader.style.display = "none";
-      });
-      // Select the GIF element
-      setTimeout(() => {
-        const heroGIF = document.querySelector(".heroGIF");
-        heroGIF.parentNode.removeChild(heroGIF);
 
-        // Animate heroImage opacity from 0 to 1 using GSAP
-        gsap.to(".heroImage", {
-          opacity: 1,
-          duration: 0, // Instant transition
+        // Select the GIF element
+        setTimeout(() => {
+          const heroGIF = document.querySelector(".heroGIF");
+          heroGIF.parentNode.removeChild(heroGIF);
+
+          // Animate heroImage opacity from 0 to 1 using GSAP
+          gsap.to(".heroImage", {
+            opacity: 1,
+            duration: 0, // Instant transition
+          });
+
+          // Move heroImage 50px in the y direction in 0.4s using GSAP
+          gsap.to(".heroImage", {
+            y: () => {
+              // Calculate the y value based on screen width
+              const screenWidth = window.innerWidth;
+              // Define different y values based on screen width
+              if (screenWidth >= 1280) {
+                return 70; // Value for larger screens
+              } else if (screenWidth >= 1024) {
+                return 50; // Value for medium screens
+              } else if (screenWidth >= 768) {
+                return 40; // Value for smaller screens
+              } else if (screenWidth >= 640) {
+                return 30; // Value for smaller screens
+              } else if (screenWidth >= 350) {
+                return 20; // Value for smaller screens
+              }
+            },
+            duration: 0.4,
+            delay: 0.2, // Delay to start after the opacity animation
+          });
+        }, 1800); // Adjust the duration (in milliseconds) as needed
+
+        gsap.from(".shilpaHeading", {
+          y: 300,
+          opacity: 0,
+          scale: 0.3,
+          duration: 0.7,
+          delay: 2,
         });
 
-        // Move heroImage 50px in the y direction in 0.4s using GSAP
-        gsap.to(".heroImage", {
-          y: () => {
-            // Calculate the y value based on screen width
-            const screenWidth = window.innerWidth;
-            // Define different y values based on screen width
-            if (screenWidth >= 1280) {
-              return 70; // Value for larger screens
-            } else if (screenWidth >= 1024) {
-              return 50; // Value for medium screens
-            } else if (screenWidth >= 768) {
-              return 40; // Value for smaller screens
-            } else if (screenWidth >= 640) {
-              return 30; // Value for smaller screens
-            } else if (screenWidth >= 350) {
-              return 20; // Value for smaller screens
-            }
-          },
-          duration: 0.4,
-          delay: 0.2, // Delay to start after the opacity animation
+        gsap.from(".shilpaSubHeading", {
+          y: -30,
+          opacity: 0,
+          duration: 0.5,
+          delay: 2.3,
         });
-      }, 1800); // Adjust the duration (in milliseconds) as needed
-
-      gsap.from(".shilpaHeading", {
-        y: 300,
-        opacity: 0,
-        scale: 0.3,
-        duration: 0.7,
-        delay: 2,
-      });
-
-      gsap.from(".shilpaSubHeading", {
-        y: -30,
-        opacity: 0,
-        duration: 0.5,
-        delay: 2.3,
       });
 
       // JavaScript for changing opacity when clicking #aboutMeButton
