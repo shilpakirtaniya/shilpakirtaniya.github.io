@@ -10,7 +10,7 @@
   <style></style>
   <body class="m-0 p-0">
     <!-- Hero Section -->
-    <section class="heroSection relative container mx-auto max-w-screen-3xl">
+    <section class="heroSection relative">
       <div class="absolute h-full w-full flex items-end overflow-hidden">
         <div class="bottom-0 left-0 w-full">
           <img
@@ -21,9 +21,9 @@
         </div>
       </div>
       <div class="absolute h-full w-full flex items-end overflow-hidden">
-        <div class="bottom-0 left-0 w-full">
+        <div class="bottom-0 left-0 w-full z-60">
           <img
-            class="heroImage w-full z-50 opacity-0"
+            class="heroImage w-full opacity-0"
             src="/src/project/imges/heroImages/1-ux7OjOU39-transformed.png"
           />
         </div>
@@ -31,10 +31,10 @@
       <div class="contentContainer absolute w-full h-full">
         <div class="contentSection relative w-full h-full flex flex-col">
           <div
-            class="headingContainer h-1/2 w-full flex flex-col justify-center items-center z-60"
+            class="headingContainer h-1/2 w-full flex flex-col justify-center items-center z-50"
           >
             <h1
-              class="shilpaHeading xxs:text-5xl xl:text-5xl 2xl:text-5xl 3xl:text-8xl sunroll text-mud z-10"
+              class="shilpaHeading xxs:text-5xl xl:text-5xl 2xl:text-5xl 3xl:text-8xl sunroll text-mud"
             >
               ShIlpa KIRtanIya
             </h1>
@@ -252,7 +252,22 @@
 
         // Move heroImage 50px in the y direction in 0.4s using GSAP
         gsap.to(".heroImage", {
-          y: 70,
+          y: () => {
+            // Calculate the y value based on screen width
+            const screenWidth = window.innerWidth;
+            // Define different y values based on screen width
+            if (screenWidth >= 1280) {
+              return 70; // Value for larger screens
+            } else if (screenWidth >= 1024) {
+              return 50; // Value for medium screens
+            } else if (screenWidth >= 768) {
+              return 40; // Value for smaller screens
+            } else if (screenWidth >= 640) {
+              return 30; // Value for smaller screens
+            } else if (screenWidth >= 350) {
+              return 20; // Value for smaller screens
+            }
+          },
           duration: 0.4,
           delay: 0.2, // Delay to start after the opacity animation
         });
