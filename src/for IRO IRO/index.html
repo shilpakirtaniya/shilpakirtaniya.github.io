@@ -21,9 +21,15 @@
         animation: scroll 30s linear infinite;
       }
 
+      @media (min-width: 350px) {
+        :root {
+          --scroll-offset: -1295px; /* Change scroll offset for larger screens */
+        }
+      }
+
       @media (min-width: 640px) {
         :root {
-          --scroll-offset: -1195px; /* Change scroll offset for larger screens */
+          --scroll-offset: -2395px; /* Change scroll offset for larger screens */
         }
       }
 
@@ -48,62 +54,65 @@
       /* general styles */
     </style>
   </head>
-  <body class="m-0 p-0 bg-white container mx-auto">
-    <section
-      class="scroller overflow-hidden sm:h-[233px] md:h-[333.33px] 4xl:h-[443px] w-full"
-    >
-      <div
-        class="scrollerInner w-full h-full flex justify-between gap-[19px] items-center mt-[19px]"
+  <body class="m-0 p-0 bg-white">
+    <div class="container mx-auto">
+      <section
+        class="scroller overflow-hidden xxs:h-[244px] sm:h-[307px] md:h-[333.33px] 4xl:h-[443px] w-full border"
       >
-        <img
-          class="lookbookImages sm:w-[350px] md:w-[500px] 4xl:w-[665px]"
-          src="/src/for IRO IRO/hero images/1.png"
-          alt=""
-        />
-        <img
-          class="lookbookImages sm:w-[350px] md:w-[500px] 4xl:w-[665px]"
-          src="/src/for IRO IRO/hero images/2.png"
-          alt=""
-        />
-        <img
-          class="lookbookImages sm:w-[350px] md:w-[500px] 4xl:w-[665px]"
-          src="/src/for IRO IRO/hero images/3.png"
-          alt=""
-        />
-        <img
-          class="lookbookImages sm:w-[350px] md:w-[500px] 4xl:w-[665px]"
-          src="/src/for IRO IRO/hero images/4.png"
-          alt=""
-        />
-        <img
-          class="lookbookImages sm:w-[350px] md:w-[500px] 4xl:w-[665px]"
-          src="/src/for IRO IRO/hero images/5.png"
-          alt=""
-        />
-      </div>
-    </section>
-    <section
-      class="mainHeading h-[40vh] w-full gap-5 text-center flex flex-col justify-center items-center"
-    >
-      <h3
-        class="xxs:text-xs sm:text-sm md:text-md lg:text-lg font-display italic opacity-65"
+        <div
+          class="scrollerInner w-full h-full flex justify-between gap-[19px] items-center mt-[19px]"
+        >
+          <img
+            class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 4xl:w-[665px]"
+            src="/src/for IRO IRO/hero images/1.png"
+            alt=""
+          />
+          <img
+            class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 4xl:w-[665px]"
+            src="/src/for IRO IRO/hero images/2.png"
+            alt=""
+          />
+          <img
+            class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 4xl:w-[665px]"
+            src="/src/for IRO IRO/hero images/3.png"
+            alt=""
+          />
+          <img
+            class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 4xl:w-[665px]"
+            src="/src/for IRO IRO/hero images/4.png"
+            alt=""
+          />
+          <img
+            class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 4xl:w-[665px]"
+            src="/src/for IRO IRO/hero images/5.png"
+            alt=""
+          />
+        </div>
+      </section>
+      <section
+        class="mainHeading h-[40vh] w-full gap-5 text-center flex flex-col justify-center items-center"
       >
-        lookbook
-      </h3>
-      <h1
-        class="xxs:text-lg xs:text-xl sm:text-2xl lg:text-3xl font-noto font-semibold"
-      >
-        IRO IRO’s annual collection- Pyaar
-      </h1>
-      <h3
-        class="text-sm font-sans opacity-65 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px]"
-      >
-        The lookbook and accompanying collateral showcase IRO IRO’s annual
-        collection, “Pyaar,” Inspired by the relationships that fuels
-        creativity. the collection encapsulates a sense of familiarity and
-        nostalgia, resonating deeply with the audience
-      </h3>
-    </section>
+        <h3
+          class="xxs:text-xs sm:text-sm md:text-md lg:text-lg font-display italic opacity-65"
+        >
+          lookbook
+        </h3>
+        <h1
+          class="xxs:text-lg xs:text-xl sm:text-2xl lg:text-3xl font-noto font-semibold"
+        >
+          IRO IRO’s annual collection- Pyaar
+        </h1>
+        <h3
+          class="text-sm font-sans opacity-65 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px]"
+        >
+          The lookbook and accompanying collateral showcase IRO IRO’s annual
+          collection, “Pyaar,” Inspired by the relationships that fuels
+          creativity. the collection encapsulates a sense of familiarity and
+          nostalgia, resonating deeply with the audience
+        </h3>
+      </section>
+    </div>
+
     <section class="bg-grey pb-[200px] w-full pt-[80px]">
       <div
         class="textContains xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] 3xl:w-[1100px] mx-auto"
