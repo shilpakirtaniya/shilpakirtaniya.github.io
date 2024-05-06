@@ -81,7 +81,7 @@
         </div>
       </div>
       <div class="absolute h-full w-full flex items-end overflow-hidden">
-        <div class="bottom-0 left-0 w-full z-40">
+        <div class="bottom-0 left-0 w-full z-50">
           <img
             class="heroGIF w-full"
             src="/src/project/imges/heroImages/ezgif.com-animated-gif-maker(2).gif"
@@ -103,7 +103,7 @@
             class="headingContainer h-1/2 w-full flex flex-col justify-center items-center z-10"
           >
             <h1
-              class="shilpaHeading xxs:text-5xl xl:text-5xl 2xl:text-5xl 3xl:text-8xl sunroll text-mud"
+              class="shilpaHeading xxs:text-5xl xl:text-5xl 2xl:text-8xl sunroll text-mud"
             >
               ShIlpa KIRtanIya
             </h1>
@@ -116,7 +116,7 @@
           <div class="linksContainer h-1/2 w-full flex">
             <div class="h-full w-1/2 flex justify-start items-end relative">
               <div
-                class="h-[80%] w-[60%] flex justify-start items-end absolute p-5"
+                class="h-[80%] w-[70%] flex justify-start items-end absolute p-16"
               >
                 <h3
                   class="xxs:text-xs xs:text-sm sm:text-md md:text-ld lg:text-xl font-noto leading-6 text-mud intitialText opacity-65 z-30"
@@ -137,27 +137,30 @@
                 </h3>
               </div>
               <div
-                class="aboutMeContainer h-[80%] w-[60%] flex justify-start items-end absolute p-5"
+                class="aboutMe h-[80%] w-[70%] text-mud flex flex-col opacity-0 justify-end items-start absolute p-16"
               >
-                <h3
-                  class="xxs:text-xs xs:text-sm sm:text-md md:text-ld lg:text-xl font-noto leading-6 text-mud opacity-0 aboutMe"
-                >
-                  As a creative professional with a background in textiles and a
-                  passion for design, I specialize in communication design and
-                  visual storytelling. With expertise in layout design, color
-                  theory, and digital illustration, I prioritize both aesthetics
-                  and functionality. Eager to learn and collaborate, I thrive in
-                  dynamic environments where I can contribute my skills and grow
-                  alongside talented teams. Excited to explore opportunities in
-                  visual communication and editorial design, I am ready to bring
-                  my creativity and problem-solving abilities to innovative
-                  projects that leave a lasting impact.
-                </h3>
+                <h1 class="text-4xl font-noto font-bold">Hi there!</h1>
+                <h1 class="text-xl font-noto w-[90%]">
+                  I’m Shilpa, an interdisciplinary designer with a passion for
+                  visual design, textile design, illustrations, and photography.
+                  With close to a year of experience at the zero-waste fashion
+                  brand IRO IRO, I've refined my skills in visual design,
+                  product styling, textile design, and photography.
+                </h1>
+                <h1 class="text-xl font-noto">
+                  To view my resume, click
+                  <a
+                    href="https://drive.google.com/file/d/1I8Q9Df-FtAgqphl6XFNaU9qvoGy6MxL5/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><b class="hover:underline z-30">here</b></a
+                  >
+                </h1>
               </div>
             </div>
-            <div class="h-full w-1/2 flex flex-col justify-end items-end p-5">
+            <div class="h-full w-1/2 flex flex-col justify-end items-end p-16">
               <h1
-                class="xxs:text-xs xs:text-sm sm:text-md md:text-ld lg:text-xl font-noto text-mud hover:underline z-30"
+                class="xxs:text-xs xs:text-sm sm:text-md md:text-ld lg:text-2xl font-noto text-mud hover:underline z-30"
               >
                 <a
                   href="/src/project/index.html"
@@ -169,30 +172,9 @@
 
               <h1
                 id="aboutMeButton"
-                class="xxs:text-xs xs:text-sm sm:text-md md:text-ld lg:text-xl font-noto text-mud hover:underline z-30 hover:cursor-pointer"
+                class="xxs:text-xs xs:text-sm sm:text-md md:text-ld lg:text-2xl font-noto text-mud hover:underline z-30 hover:cursor-pointer"
               >
                 About me
-              </h1>
-
-              <h1
-                class="xxs:text-xs xs:text-sm sm:text-md md:text-ld lg:text-xl font-noto text-mud hover:underline z-30"
-              >
-                <a
-                  href="mailto:shilpakirtaniya89@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >contact</a
-                >
-              </h1>
-              <h1
-                class="xxs:text-xs xs:text-sm sm:text-md md:text-ld lg:text-xl font-noto text-mud hover:underline z-30"
-              >
-                <a
-                  href="https://drive.google.com/file/d/1I8Q9Df-FtAgqphl6XFNaU9qvoGy6MxL5/view?usp=drive_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Resume</a
-                >
               </h1>
             </div>
           </div>
@@ -382,13 +364,17 @@
       aboutMeButton.addEventListener("click", () => {
         if (!isAboutMeVisible) {
           initialText.style.opacity = "0";
+          initialText.style.zIndex = "20"; // Set z-index of initialText
           aboutMe.style.opacity = "0.7";
-          aboutMe.style.transition = "opacity 0.7s";
+          aboutMe.style.zIndex = "30"; // Set z-index of aboutMe
+          aboutMe.style.transition = "opacity 0.7s, z-index 0.7s"; // Add z-index to transition
           isAboutMeVisible = true;
         } else {
           initialText.style.opacity = "1";
+          initialText.style.zIndex = "30"; // Set z-index of initialText back to default
           aboutMe.style.opacity = "0";
-          aboutMe.style.transition = "opacity 0.7s";
+          aboutMe.style.zIndex = "20"; // Set z-index of aboutMe back to default
+          aboutMe.style.transition = "opacity 0.7s, z-index 0.7s"; // Add z-index to transition
           isAboutMeVisible = false;
         }
       });
