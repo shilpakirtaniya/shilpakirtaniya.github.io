@@ -77,54 +77,57 @@
         <div class="wave"></div>
       </div>
     </div>
-    <header class="h-[100px] w-full flex items-center fixed z-10 bg-white">
-      <div
-        class="container mx-auto w-full h-[80%] flex items-center justify-between"
-      >
-        <h1 class="sunroll text-4xl">ShIlpa KIRtanIya</h1>
-        <ul class="text-2xl flex gap-10 noto">
-          <li><a href="/index.html">Work</a></li>
-          <li><a href="/src/project/index.html">Project</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </div>
-    </header>
-    <div class="order-content container mx-auto pt-[100px]">
-      <section
-        class="xxs:h-[500px] sm:h-[700px] lg:h-[800px] xl:h-screen w-full relative overflow-hidden"
-      >
-        <img
-          class="absolute xxs:left-52 xxs:scale-[290%] sm:scale-[200%] lg:scale-[170%] 2xl:scale-[170%] xl:left-40 2xl:left-[350px] left-0 bottom-0 bg-contain"
-          src="/src/project/surface work/hero page/20221120_155919.jpg"
-          alt=""
-        />
+
+    <div class="order-content">
+      <header class="h-[50px] w-full flex items-center fixed z-10 bg-white">
         <div
-          class="absolute grid place-content-end xxs:p-5 lg:p-16 h-full w-full"
+          class="container mx-auto w-full h-[80%] flex items-center justify-between"
         >
-          <div
-            class="xxs:h-[350px] xs:h-[270px] sm:h-[400px] md:h-[450px] lg:h-[340px] xxs:w-[220px] xs:w-[370px] sm:w-[400px] md:w-[300px] lg:w-[400px] font-sans text-white"
-          >
-            <h1 class="xxs:text-md sm:text-2xl lg:text-3xl mb-2 font-[500]">
-              Surface Work
-            </h1>
-            <p class="xxs:text-xs sm:text-sm md:text-lg leading-4 lg:text-xl">
-              I remember my <b><i>Thamma</i></b> (grandmother) making
-              <b><i>Katha</i></b> from old cotton sarees of her. She would spend
-              days stitching all the pieces of cloth together with her hands
-              with love and a lot of patience using running stitches and give it
-              to us saying <i>" eta katha na, eta amaar bhalobasha"</i> (this is
-              not just a Katha, this is my love for you). And that's how i got
-              introduced to Running stitches.
-            </p>
-            <p class="xxs:text-xs sm:text-sm md:text-lg leading-4 lg:text-xl">
-              Incorporating the same affection and patience, I made this piece
-              combined with <b><i>block print</i></b
-              >, hope you like it!!!
-            </p>
-          </div>
+          <h1 class="sunroll text-lg">ShIlpa KIRtanIya</h1>
+          <ul class="text-md flex gap-10 noto">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/src/project/index.html">Project</a></li>
+            <li onclick="scrollToSection()">Contact</li>
+          </ul>
         </div>
-      </section>
-      <main>
+      </header>
+
+      <main class="container mx-auto">
+        <section
+          class="xxs:h-[500px] sm:h-[700px] lg:h-[800px] xl:h-screen w-full relative overflow-hidden pt-[50px]"
+        >
+          <img
+            class="absolute xxs:left-52 xxs:scale-[290%] sm:scale-[200%] lg:scale-[170%] 2xl:scale-[170%] xl:left-40 2xl:left-[350px] left-0 bottom-0 bg-contain"
+            src="/src/project/surface work/hero page/20221120_155919.jpg"
+            alt=""
+          />
+          <div
+            class="absolute grid place-content-end xxs:p-5 lg:p-16 h-full w-full"
+          >
+            <div
+              class="xxs:h-[350px] xs:h-[270px] sm:h-[400px] md:h-[450px] lg:h-[340px] xxs:w-[220px] xs:w-[370px] sm:w-[400px] md:w-[300px] lg:w-[400px] font-sans text-white"
+            >
+              <h1 class="xxs:text-md sm:text-2xl lg:text-3xl mb-2 font-[500]">
+                Surface Work
+              </h1>
+              <p class="xxs:text-xs sm:text-sm md:text-lg leading-4 lg:text-xl">
+                I remember my <b><i>Thamma</i></b> (grandmother) making
+                <b><i>Katha</i></b> from old cotton sarees of her. She would
+                spend days stitching all the pieces of cloth together with her
+                hands with love and a lot of patience using running stitches and
+                give it to us saying
+                <i>" eta katha na, eta amaar bhalobasha"</i> (this is not just a
+                Katha, this is my love for you). And that's how i got introduced
+                to Running stitches.
+              </p>
+              <p class="xxs:text-xs sm:text-sm md:text-lg leading-4 lg:text-xl">
+                Incorporating the same affection and patience, I made this piece
+                combined with <b><i>block print</i></b
+                >, hope you like it!!!
+              </p>
+            </div>
+          </div>
+        </section>
         <section
           class="explorationSection md:h-[500px] lg:h-[600px] xl:h-[900px] w-full flex flex-col max-w-screen-2xl justify-center items-center mx-auto"
         >
@@ -265,6 +268,64 @@
           </div>
         </section>
       </main>
+      <footer class="h-[400px] w-full flex items-center justify-center">
+        <div class="container h-[70%] w-full flex flex-col justify-between">
+          <div class="h-1/3 w-full flex items-center justify-center">
+            <div
+              class="h-[40px] w-[180px] rounded-lg flex justify-center items-center backButton text-md hover:text-lg transition duration-150 ease-in-out"
+            >
+              <h1 class="calibri">
+                <a href="/src/project/index.html">Back to projects</a>
+              </h1>
+            </div>
+          </div>
+          <div
+            class="h-1/3 w-full flex flex-col items-center justify-center gap-3"
+          >
+            <div
+              class="iconsContainer h-[40px] w-[200px] justify-center flex gap-3"
+            >
+              <a
+                href="https://www.linkedin.com/in/shilpa-kirtaniya-504375231/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div
+                  class="h-full w-[40px] border border-shadedblack rounded-full flex justify-center items-center"
+                >
+                  <img
+                    class="h-[50%] hover:h-[40%] transition duration-150 ease-in-out"
+                    src="/src/icons/linkein.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="mailto:shilpakirtaniyaa@gmail.com" target="_blank">
+                <div
+                  class="h-full w-[40px] border border-shadedblack rounded-full flex justify-center items-center"
+                >
+                  <img
+                    class="h-[60%] hover:h-[40%] transition duration-150 ease-in-out"
+                    src="/src/icons/email.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="h-1/3 w-full flex flex-col items-center justify-center">
+            <p class="font-sans font-light">
+              Copyright &#169;2024 All rights reserved
+            </p>
+            <p class="font-sans font-light">
+              Website Developed by
+              <a href="https://vishalkirtaniya.netlify.app/" target="_blank"
+                ><b class="text-blue hover:underline">Vishal Aditya</b></a
+              >
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -349,6 +410,11 @@
           scrub: 1,
         },
       });
+
+      function scrollToSection() {
+        // Replace 'destinationPage.html' with the path to your destination HTML file
+        window.location.href = "/src/project/index.html#sectionToScroll";
+      }
     </script>
   </body>
 </html>
