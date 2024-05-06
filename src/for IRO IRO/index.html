@@ -6,6 +6,61 @@
     <title>lookbook</title>
     <link rel="stylesheet" href="/src/output.css" />
     <style>
+      .center {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+      }
+      .wave {
+        width: 5px;
+        height: 70px;
+        background: black;
+        margin: 10px;
+        animation: wave 1s linear infinite;
+        border-radius: 20px;
+      }
+      .wave:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .wave:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .wave:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .wave:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      .wave:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+      .wave:nth-child(7) {
+        animation-delay: 0.6s;
+      }
+      .wave:nth-child(8) {
+        animation-delay: 0.7s;
+      }
+      .wave:nth-child(9) {
+        animation-delay: 0.8s;
+      }
+      .wave:nth-child(10) {
+        animation-delay: 0.9s;
+      }
+
+      @keyframes wave {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+
       .animatedImages {
         mask: linear-gradient(
           90deg,
@@ -55,6 +110,20 @@
     </style>
   </head>
   <body class="m-0 p-0 bg-white">
+    <div id="preloader" class="h-full w-full absolute z-50">
+      <div class="center">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+    </div>
     <div class="container mx-auto">
       <section
         class="scroller overflow-hidden xxs:h-[244px] sm:h-[307px] md:h-[333.33px] 4xl:h-[443px] w-full"
@@ -180,6 +249,12 @@
         </h3>
       </div>
     </section>
+    <script>
+      const loader = document.getElementById("preloader");
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script>
     <script src="/src/for IRO IRO/header.js"></script>
   </body>
 </html>

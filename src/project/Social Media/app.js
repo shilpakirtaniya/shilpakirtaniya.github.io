@@ -1,148 +1,50 @@
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".s", {
-  y: 400,
-  duration: 0.5,
-  scrollTrigger: {
-    trigger: ".edition",
-    start: "top 70%",
-    end: "bottom 0%",
-    // markers: true,
-    ease: "power1.out",
-    toggleActions: "play none play reverse",
-  },
-});
-gsap.from(".o", {
-  y: 400,
-  duration: 0.5,
-  delay: 0.3,
-  scrollTrigger: {
-    trigger: ".edition",
-    start: "top 70%",
-    end: "bottom 0%",
-    // markers: true,
-    ease: "power1.out",
-    toggleActions: "play none play reverse",
-  },
-});
-gsap.from(".c", {
-  y: 400,
-  duration: 0.5,
-  delay: 0.4,
-  scrollTrigger: {
-    trigger: ".edition",
-    start: "top 70%",
-    end: "bottom 0%",
-    // markers: true,
-    ease: "power1.out",
-    toggleActions: "play none play reverse",
-  },
-});
-
-gsap.from(".i", {
-  y: 400,
-  duration: 0.5,
-  delay: 0.6,
-  scrollTrigger: {
-    trigger: ".edition",
-    start: "top 70%",
-    end: "bottom 0%",
-    // markers: true,
-    ease: "power1.out",
-    toggleActions: "play none play reverse",
-  },
-});
-
-gsap.from(".a", {
-  y: 400,
-  duration: 0.5,
-  delay: 0.7,
-  scrollTrigger: {
-    trigger: ".edition",
-    start: "top 70%",
-    end: "bottom 0%",
-    // markers: true,
-    ease: "power1.out",
-    toggleActions: "play none play reverse",
-  },
-});
-
-gsap.from(".l", {
-  y: 400,
-  duration: 0.5,
-  delay: 0.9,
-  scrollTrigger: {
-    trigger: ".edition",
-    start: "top 70%",
-    end: "bottom 0%",
-    // markers: true,
-    ease: "power1.out",
-    toggleActions: "play none play reverse",
-  },
-});
-
-gsap.from(".m", {
-  y: 400,
-  duration: 0.5,
-  delay: 0.93,
-  scrollTrigger: {
-    trigger: ".edition",
-    start: "top 70%",
-    end: "bottom 0%",
-    // markers: true,
-    ease: "power1.out",
-    toggleActions: "play none play reverse",
-  },
-});
-
-gsap.from(".e", {
-  y: 400,
-  duration: 0.5,
-  delay: 0.95,
-  scrollTrigger: {
-    trigger: ".edition",
-    start: "top 70%",
-    end: "bottom 0%",
-    // markers: true,
-    ease: "power1.out",
-    toggleActions: "play none play reverse",
-  },
-});
-
-gsap.from(".d", {
-  y: 400,
-  duration: 0.5,
-  delay: 1,
-  scrollTrigger: {
-    trigger: ".edition",
-    start: "top 70%",
-    end: "bottom 0%",
-    // markers: true,
-    ease: "power1.out",
-    toggleActions: "play none play reverse",
-  },
-});
-
-gsap.fromTo(
-  ".subheading1",
-  {
-    opacity: 0,
-  },
-  {
-    y: () => {
-      // Calculate the y value based on screen width
-      const screenWidth = window.innerWidth;
-      // Define different y values based on screen width
-      if (screenWidth >= 1280) {
-        return 180; // Value for larger screens
-      } else if (screenWidth >= 1024) {
-        return 100; // Value for medium screens
-      } else if (screenWidth >= 768) {
-        return 80; // Value for smaller screens
-      }
+const loader = document.getElementById("preloader");
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+  gsap.from(".s", {
+    y: 400,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: ".edition",
+      start: "top 70%",
+      end: "bottom 0%",
+      // markers: true,
+      ease: "power1.out",
+      toggleActions: "play none play reverse",
     },
-    opacity: 0.7,
-    duration: 0.7,
+  });
+  gsap.from(".o", {
+    y: 400,
+    duration: 0.5,
+    delay: 0.3,
+    scrollTrigger: {
+      trigger: ".edition",
+      start: "top 70%",
+      end: "bottom 0%",
+      // markers: true,
+      ease: "power1.out",
+      toggleActions: "play none play reverse",
+    },
+  });
+  gsap.from(".c", {
+    y: 400,
+    duration: 0.5,
+    delay: 0.4,
+    scrollTrigger: {
+      trigger: ".edition",
+      start: "top 70%",
+      end: "bottom 0%",
+      // markers: true,
+      ease: "power1.out",
+      toggleActions: "play none play reverse",
+    },
+  });
+
+  gsap.from(".i", {
+    y: 400,
+    duration: 0.5,
     delay: 0.6,
     scrollTrigger: {
       trigger: ".edition",
@@ -152,8 +54,110 @@ gsap.fromTo(
       ease: "power1.out",
       toggleActions: "play none play reverse",
     },
-  }
-);
+  });
+
+  gsap.from(".a", {
+    y: 400,
+    duration: 0.5,
+    delay: 0.7,
+    scrollTrigger: {
+      trigger: ".edition",
+      start: "top 70%",
+      end: "bottom 0%",
+      // markers: true,
+      ease: "power1.out",
+      toggleActions: "play none play reverse",
+    },
+  });
+
+  gsap.from(".l", {
+    y: 400,
+    duration: 0.5,
+    delay: 0.9,
+    scrollTrigger: {
+      trigger: ".edition",
+      start: "top 70%",
+      end: "bottom 0%",
+      // markers: true,
+      ease: "power1.out",
+      toggleActions: "play none play reverse",
+    },
+  });
+
+  gsap.from(".m", {
+    y: 400,
+    duration: 0.5,
+    delay: 0.93,
+    scrollTrigger: {
+      trigger: ".edition",
+      start: "top 70%",
+      end: "bottom 0%",
+      // markers: true,
+      ease: "power1.out",
+      toggleActions: "play none play reverse",
+    },
+  });
+
+  gsap.from(".e", {
+    y: 400,
+    duration: 0.5,
+    delay: 0.95,
+    scrollTrigger: {
+      trigger: ".edition",
+      start: "top 70%",
+      end: "bottom 0%",
+      // markers: true,
+      ease: "power1.out",
+      toggleActions: "play none play reverse",
+    },
+  });
+
+  gsap.from(".d", {
+    y: 400,
+    duration: 0.5,
+    delay: 1,
+    scrollTrigger: {
+      trigger: ".edition",
+      start: "top 70%",
+      end: "bottom 0%",
+      // markers: true,
+      ease: "power1.out",
+      toggleActions: "play none play reverse",
+    },
+  });
+
+  gsap.fromTo(
+    ".subheading1",
+    {
+      opacity: 0,
+    },
+    {
+      y: () => {
+        // Calculate the y value based on screen width
+        const screenWidth = window.innerWidth;
+        // Define different y values based on screen width
+        if (screenWidth >= 1280) {
+          return 180; // Value for larger screens
+        } else if (screenWidth >= 1024) {
+          return 100; // Value for medium screens
+        } else if (screenWidth >= 768) {
+          return 80; // Value for smaller screens
+        }
+      },
+      opacity: 0.7,
+      duration: 0.7,
+      delay: 0.6,
+      scrollTrigger: {
+        trigger: ".edition",
+        start: "top 70%",
+        end: "bottom 0%",
+        // markers: true,
+        ease: "power1.out",
+        toggleActions: "play none play reverse",
+      },
+    }
+  );
+});
 
 gsap.to(".imageFrame", {
   scrollTrigger: {
