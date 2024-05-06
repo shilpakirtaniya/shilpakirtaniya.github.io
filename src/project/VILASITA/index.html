@@ -138,7 +138,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="order-content">
       <section class="h-[1080px] w-full px-16 pt-16">
         <div class="h-full w-full">
           <div class="h-[10%] w-full mx-auto flex justify-between opacity-60">
@@ -327,7 +327,7 @@
         class="h-screen section5 w-full bg-vilasita bg-no-repeat bg-cover relative"
       >
         <div class="h-full w-full flex container mx-auto">
-          <div class="h-screen w-1/3 relative bg-black overflow-hidden">
+          <div class="h-screen w-2/5 relative overflow-hidden">
             <div class="h-full w-full mainPage absolute">
               <img
                 class="w-full page1Main scale-[120%]"
@@ -365,7 +365,7 @@
             </div>
           </div>
           <div
-            class="h-screen w-2/3 flex justify-center overflow-hidden items-center"
+            class="h-screen w-3/5 flex justify-center overflow-hidden items-center"
           >
             <div
               class="h-[600px] w-[706px] absolute flex flex-col justify-between"
@@ -492,7 +492,7 @@
 
             <div class="absolute h-full w-full flex justify-center items-end">
               <h1
-                class="w-full text-xl text-white font-light text-center mb-10 opacity-50"
+                class="w-full text-sm text-white font-light text-center mb-10 opacity-50"
               >
                 click for more pictures
               </h1>
@@ -508,8 +508,21 @@
     <script>
       const scrollers = document.querySelectorAll(".scroller");
       const loader = document.getElementById("preloader");
+      const orderContent = document.querySelectorAll(".order-content");
+
+      // Hide all order content initially
+      orderContent.forEach((content) => {
+        content.style.display = "none";
+      });
+
       window.addEventListener("load", function () {
+        // Hide the preloader
         loader.style.display = "none";
+
+        // Show all order content once the preloader is hidden
+        orderContent.forEach((content) => {
+          content.style.display = "block";
+        });
         addAnimation();
       });
 

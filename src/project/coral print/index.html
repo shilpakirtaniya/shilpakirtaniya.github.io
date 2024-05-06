@@ -101,7 +101,7 @@
         </h1>
       </div>
     </header>
-    <main>
+    <main class="order-content">
       <section
         class="xs:h-[80px] sm:h-[120px] lg:h-[170px] xl:h-[200px] 2xl:h-[270px] w-full flex justify-center overflow-hidden"
       >
@@ -196,8 +196,21 @@
     <footer></footer>
     <script>
       const loader = document.getElementById("preloader");
+      const orderContent = document.querySelectorAll(".order-content");
+
+      // Hide all order content initially
+      orderContent.forEach((content) => {
+        content.style.display = "none";
+      });
+
       window.addEventListener("load", function () {
+        // Hide the preloader
         loader.style.display = "none";
+
+        // Show all order content once the preloader is hidden
+        orderContent.forEach((content) => {
+          content.style.display = "block";
+        });
       });
     </script>
   </body>

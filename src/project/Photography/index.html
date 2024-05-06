@@ -116,14 +116,14 @@
         </div>
       </div>
       <h1
-        class="xxs:w-full sm:w-[560px] xxs:text-xs sm:text-[16px] sm:p-10 leading-5 font-sans text-center"
+        class="xxs:w-full sm:w-[560px] xxs:text-xs sm:text-[16px] sm:p-10 leading-5 font-sans text-center opacity-70"
       >
         Here is a compilation of photographs I took over the span of a year,
         specifically for the brands I worked with, intended for use on their
         social media platforms and websites.
       </h1>
     </header>
-    <main>
+    <main class="order-content">
       <section
         class="xxs:h-[900px] xs:h-[1158px] sm:h-[1150px] md:h-[900px] xl:h-[1100px] 2xl:h-[1400px] 3xl:h-[1500px] w-full flex xxs:flex-col md:flex-row 3xl:p-[60px]"
       >
@@ -341,8 +341,21 @@
     </main>
     <script>
       const loader = document.getElementById("preloader");
+      const orderContent = document.querySelectorAll(".order-content");
+
+      // Hide all order content initially
+      orderContent.forEach((content) => {
+        content.style.display = "none";
+      });
+
       window.addEventListener("load", function () {
+        // Hide the preloader
         loader.style.display = "none";
+
+        // Show all order content once the preloader is hidden
+        orderContent.forEach((content) => {
+          content.style.display = "block";
+        });
       });
     </script>
   </body>
