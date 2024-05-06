@@ -6,6 +6,13 @@
     <title>lookbook</title>
     <link rel="stylesheet" href="/src/output.css" />
     <style>
+      .backButton:hover {
+        box-shadow: 0 0 1px 1px #494f55;
+        transition: all;
+        transition-duration: 150ms;
+        transition-timing-function: ease-in-out;
+      }
+
       .center {
         height: 100vh;
         display: flex;
@@ -109,146 +116,220 @@
       /* general styles */
     </style>
   </head>
-  <body class="m-0 p-0 bg-white container mx-auto">
-    <div id="preloader" class="h-full w-full absolute z-50 overflow-hidden">
-      <div class="center">
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-      </div>
-    </div>
-    <div class="">
-      <section
-        class="scroller overflow-hidden xxs:h-[244px] sm:h-[307px] md:h-[333.33px] 4xl:h-[443px] w-full"
+  <body class="m-0 p-0 bg-white">
+    <header class="h-[100px] w-full flex items-center fixed z-10 bg-white">
+      <div
+        class="container mx-auto w-full h-[80%] flex items-center justify-between"
       >
-        <div
-          class="scrollerInner w-full h-full flex justify-between gap-[19px] items-center mt-[19px]"
+        <h1 class="sunroll text-4xl">ShIlpa KIRtanIya</h1>
+        <ul class="text-2xl flex gap-10 noto">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/src/project/index.html">Project</a></li>
+          <li onclick="scrollToSection()">Contact</li>
+        </ul>
+      </div>
+    </header>
+    <div class="container mx-auto z-0 pt-[100px]">
+      <div id="preloader" class="h-full w-full absolute z-50 overflow-hidden">
+        <div class="center">
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+        </div>
+      </div>
+      <div class="">
+        <section
+          class="scroller overflow-hidden xxs:h-[244px] sm:h-[307px] md:h-[333.33px] 4xl:h-[443px] w-full"
         >
-          <img
-            class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 2xl:w-[665px]"
-            src="/src/for IRO IRO/hero images/1.png"
-            alt=""
-          />
-          <img
-            class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 2xl:w-[665px]"
-            src="/src/for IRO IRO/hero images/2.png"
-            alt=""
-          />
-          <img
-            class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 2xl:w-[665px]"
-            src="/src/for IRO IRO/hero images/3.png"
-            alt=""
-          />
-          <img
-            class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 2xl:w-[665px]"
-            src="/src/for IRO IRO/hero images/4.png"
-            alt=""
-          />
-          <img
-            class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 2xl:w-[665px]"
-            src="/src/for IRO IRO/hero images/5.png"
-            alt=""
-          />
+          <div
+            class="scrollerInner w-full h-full flex justify-between gap-[19px] items-center mt-[19px]"
+          >
+            <img
+              class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 2xl:w-[665px]"
+              src="/src/for IRO IRO/hero images/1.png"
+              alt=""
+            />
+            <img
+              class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 2xl:w-[665px]"
+              src="/src/for IRO IRO/hero images/2.png"
+              alt=""
+            />
+            <img
+              class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 2xl:w-[665px]"
+              src="/src/for IRO IRO/hero images/3.png"
+              alt=""
+            />
+            <img
+              class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 2xl:w-[665px]"
+              src="/src/for IRO IRO/hero images/4.png"
+              alt=""
+            />
+            <img
+              class="lookbookImages xxs:w-[340px] sm:w-[460px] md:w-[500px] 2xl:w-[665px]"
+              src="/src/for IRO IRO/hero images/5.png"
+              alt=""
+            />
+          </div>
+        </section>
+        <section
+          class="mainHeading h-[40vh] w-full gap-5 text-center flex flex-col justify-center items-center"
+        >
+          <h3
+            class="xxs:text-xs sm:text-sm md:text-md lg:text-lg font-display italic opacity-65"
+          >
+            lookbook
+          </h3>
+          <h1
+            class="xxs:text-lg xs:text-xl sm:text-2xl lg:text-3xl font-noto font-semibold opacity-70"
+          >
+            IRO IRO’s annual collection- Pyaar
+          </h1>
+          <h3
+            class="text-sm font-sans opacity-65 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px]"
+          >
+            The lookbook and accompanying collateral showcase IRO IRO’s annual
+            collection, “Pyaar,” Inspired by the relationships that fuels
+            creativity. the collection encapsulates a sense of familiarity and
+            nostalgia, resonating deeply with the audience
+          </h3>
+        </section>
+      </div>
+
+      <section class="bg-grey pb-[200px] w-full pt-[80px] order-content">
+        <div
+          class="textContains xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
+        >
+          <h3 class="text-sm font-sans italic opacity-65">
+            Several pages from the lookbook.
+          </h3>
+        </div>
+
+        <div
+          class="picture1 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
+        >
+          <img src="/src/project/imges/1.png" alt="" />
+        </div>
+        <div
+          class="picture2 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
+        >
+          <img src="/src/project/imges/2.png" alt="" />
+        </div>
+        <div
+          class="picture3 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
+        >
+          <img src="/src/project/imges/3.png" alt="" />
+        </div>
+        <div
+          class="picture4 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
+        >
+          <img src="/src/project/imges/4.png" alt="" />
+        </div>
+        <div
+          class="picture5 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
+        >
+          <img src="/src/project/imges/5.png" alt="" />
+        </div>
+        <div
+          class="picture6 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
+        >
+          <img src="/src/project/imges/6.png" alt="" />
+        </div>
+        <div
+          class="picture7 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
+        >
+          <img src="/src/project/imges/7.png" alt="" />
+        </div>
+        <div
+          class="picture8 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
+        >
+          <img src="/src/project/imges/8.png" alt="" />
+        </div>
+        <div
+          class="picture9 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
+        >
+          <img src="/src/project/imges/9.png" alt="" />
+        </div>
+        <div
+          class="picture10 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
+        >
+          <img src="/src/project/imges/10.png" alt="" />
+        </div>
+        <div
+          class="textContains xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
+        >
+          <h3 class="text-sm text-center font-sans italic opacity-65">
+            Softwares used: Adobe InDesign, Adobe Photoshop
+          </h3>
         </div>
       </section>
-      <section
-        class="mainHeading h-[40vh] w-full gap-5 text-center flex flex-col justify-center items-center"
-      >
-        <h3
-          class="xxs:text-xs sm:text-sm md:text-md lg:text-lg font-display italic opacity-65"
-        >
-          lookbook
-        </h3>
-        <h1
-          class="xxs:text-lg xs:text-xl sm:text-2xl lg:text-3xl font-noto font-semibold opacity-70"
-        >
-          IRO IRO’s annual collection- Pyaar
-        </h1>
-        <h3
-          class="text-sm font-sans opacity-65 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px]"
-        >
-          The lookbook and accompanying collateral showcase IRO IRO’s annual
-          collection, “Pyaar,” Inspired by the relationships that fuels
-          creativity. the collection encapsulates a sense of familiarity and
-          nostalgia, resonating deeply with the audience
-        </h3>
-      </section>
     </div>
 
-    <section class="bg-grey pb-[200px] w-full pt-[80px] order-content">
-      <div
-        class="textContains xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
-      >
-        <h3 class="text-sm font-sans italic opacity-65">
-          Several pages from the lookbook.
-        </h3>
+    <footer class="h-[400px] w-full flex items-center justify-center">
+      <div class="container h-[70%] w-full flex flex-col justify-between">
+        <div class="h-1/3 w-full flex items-center justify-center">
+          <div
+            class="h-[40px] w-[180px] rounded-lg flex justify-center items-center backButton text-md hover:text-lg transition duration-150 ease-in-out"
+          >
+            <h1 class="calibri">
+              <a href="/src/project/index.html">Back to projects</a>
+            </h1>
+          </div>
+        </div>
+        <div
+          class="h-1/3 w-full flex flex-col items-center justify-center gap-3"
+        >
+          <div
+            class="iconsContainer h-[40px] w-[200px] justify-center flex gap-3"
+          >
+            <a
+              href="https://www.linkedin.com/in/shilpa-kirtaniya-504375231/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div
+                class="h-full w-[40px] border border-shadedblack rounded-full flex justify-center items-center"
+              >
+                <img
+                  class="h-[50%] hover:h-[40%] transition duration-150 ease-in-out"
+                  src="/src/icons/linkein.svg"
+                  alt=""
+                />
+              </div>
+            </a>
+            <a href="mailto:shilpakirtaniyaa@gmail.com" target="_blank">
+              <div
+                class="h-full w-[40px] border border-shadedblack rounded-full flex justify-center items-center"
+              >
+                <img
+                  class="h-[60%] hover:h-[40%] transition duration-150 ease-in-out"
+                  src="/src/icons/email.svg"
+                  alt=""
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="h-1/3 w-full flex flex-col items-center justify-center">
+          <p class="font-sans font-light">
+            Copyright &#169;2024 All rights reserved
+          </p>
+          <p class="font-sans font-light">
+            Website Developed by
+            <a href="https://vishalkirtaniya.netlify.app/" target="_blank"
+              ><b class="text-blue hover:underline">Vishal Aditya</b></a
+            >
+          </p>
+        </div>
       </div>
+    </footer>
 
-      <div
-        class="picture1 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
-      >
-        <img src="/src/project/imges/1.png" alt="" />
-      </div>
-      <div
-        class="picture2 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
-      >
-        <img src="/src/project/imges/2.png" alt="" />
-      </div>
-      <div
-        class="picture3 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
-      >
-        <img src="/src/project/imges/3.png" alt="" />
-      </div>
-      <div
-        class="picture4 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
-      >
-        <img src="/src/project/imges/4.png" alt="" />
-      </div>
-      <div
-        class="picture5 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
-      >
-        <img src="/src/project/imges/5.png" alt="" />
-      </div>
-      <div
-        class="picture6 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
-      >
-        <img src="/src/project/imges/6.png" alt="" />
-      </div>
-      <div
-        class="picture7 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
-      >
-        <img src="/src/project/imges/7.png" alt="" />
-      </div>
-      <div
-        class="picture8 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
-      >
-        <img src="/src/project/imges/8.png" alt="" />
-      </div>
-      <div
-        class="picture9 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
-      >
-        <img src="/src/project/imges/9.png" alt="" />
-      </div>
-      <div
-        class="picture10 xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
-      >
-        <img src="/src/project/imges/10.png" alt="" />
-      </div>
-      <div
-        class="textContains xxs:w-[340px] sm:w-[460px] lg:w-[576px] xl:w-[720px] 2xl:w-[900px] mx-auto"
-      >
-        <h3 class="text-sm text-center font-sans italic opacity-65">
-          Softwares used: Adobe InDesign, Adobe Photoshop
-        </h3>
-      </div>
-    </section>
     <script>
       const loader = document.getElementById("preloader");
       const orderContent = document.querySelectorAll(".order-content");
@@ -289,6 +370,11 @@
             scrollerInner.appendChild(duplicatedItem);
           });
         });
+      }
+
+      function scrollToSection() {
+        // Replace 'destinationPage.html' with the path to your destination HTML file
+        window.location.href = "/src/project/index.html#sectionToScroll";
       }
     </script>
     <!-- <script src="/src/for IRO IRO/header.js"></script> -->

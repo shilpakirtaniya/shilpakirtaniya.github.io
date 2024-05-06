@@ -21,6 +21,7 @@ module.exports = {
     },
     colors: {
       black: "#14142B",
+      shadedblack: "#494F55",
       grey: "#EEEEEE",
       white: "#ffffff",
       offwhite: "#EFF0F6",
@@ -37,6 +38,7 @@ module.exports = {
         weddingHero: "url('/src/project/Wedding card/HERO IMAGE.png')",
         mainHero:
           "url('/src/project/imges/heroImages/1-ux7OjOU39-transformed.png')",
+        footer: "url('/src/project/imges/Footer background.jpg')",
       },
       keyframes: {
         scrollRight: {
