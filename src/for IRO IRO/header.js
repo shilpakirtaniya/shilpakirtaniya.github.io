@@ -3,11 +3,6 @@ const scrollers = document.querySelectorAll(".scroller");
 // Always add the animation
 addAnimation();
 
-const loader = document.getElementById("preloader");
-window.addEventListener("load", function () {
-  loader.style.display = "none";
-});
-
 function addAnimation() {
   scrollers.forEach((scroller) => {
     // add data-animated="true" to every `.scroller` on the page

@@ -504,6 +504,36 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
-    <script src="/src/for IRO IRO/header.js"></script>
+    <!-- <script src="/src/for IRO IRO/header.js"></script> -->
+    <script>
+      const scrollers = document.querySelectorAll(".scroller");
+      const loader = document.getElementById("preloader");
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+        addAnimation();
+      });
+
+      // Always add the animation
+
+      function addAnimation() {
+        scrollers.forEach((scroller) => {
+          // add data-animated="true" to every `.scroller` on the page
+          scroller.setAttribute("data-animated", true);
+
+          // Make an array from the elements within `.scroller-inner`
+          const scrollerInner = scroller.querySelector(".scrollerInner");
+          const scrollerContent = Array.from(scrollerInner.children);
+
+          // For each item in the array, clone it
+          // add aria-hidden to it
+          // add it into the `.scroller-inner`
+          scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+          });
+        });
+      }
+    </script>
   </body>
 </html>
