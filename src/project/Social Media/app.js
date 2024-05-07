@@ -175,11 +175,11 @@ window.addEventListener("load", function () {
       trigger: ".imageFrame",
       endTrigger: ".secondGroup",
       start: "center 50%",
-      end: "top 0%",
+      end: "+=150%",
       // markers: true,
       ease: "power1.out",
       pin: true,
-      pinSpacing: false,
+      pinSpacing: true,
       toggleActions: "play reverse play reverse",
     },
   });
@@ -241,12 +241,12 @@ window.addEventListener("load", function () {
   gsap.to(".instapost1", {
     scrollTrigger: {
       trigger: ".instaContainer",
-      start: "top 0%",
-      end: "bottom 0%",
+      start: "top  0%",
+      end: "+=200%",
       // markers: true,
       ease: "power1.out",
       pin: true,
-      pinSpacing: false,
+      pinSpacing: true,
       toggleActions: "play reverse play reverse",
     },
   });

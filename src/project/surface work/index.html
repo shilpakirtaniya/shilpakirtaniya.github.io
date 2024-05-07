@@ -87,7 +87,7 @@
     <div class="order-content">
       <header class="h-[50px] w-full flex items-center fixed z-10 bg-white">
         <div
-          class="container mx-auto w-full h-[80%] flex items-center justify-between"
+          class="w-full container mx-auto max-w-screen-xl h-[80%] flex items-center justify-between"
         >
           <h1 class="sunroll text-lg">ShIlpa KIRtanIya</h1>
           <ul class="text-md flex gap-10 noto">
@@ -98,7 +98,7 @@
         </div>
       </header>
 
-      <main class="container mx-auto">
+      <main class="container max-w-screen-xl mx-auto">
         <section
           class="xxs:h-[500px] sm:h-[700px] lg:h-[800px] xl:h-screen w-full relative overflow-hidden pt-[50px]"
         >
@@ -113,10 +113,10 @@
             <div
               class="xxs:h-[350px] xs:h-[270px] sm:h-[400px] md:h-[450px] lg:h-[340px] xxs:w-[220px] xs:w-[370px] sm:w-[400px] md:w-[300px] lg:w-[400px] font-sans text-white"
             >
-              <h1 class="xxs:text-md sm:text-2xl lg:text-3xl mb-2 font-[500]">
+              <h1 class="xxs:text-md sm:text-lg lg:text-xl mb-2 font-[500]">
                 Surface Work
               </h1>
-              <p class="xxs:text-xs sm:text-sm md:text-lg leading-4 lg:text-xl">
+              <p class="xxs:text-xs sm:text-sm md:text-md leading-4 lg:text-lg">
                 I remember my <b><i>Thamma</i></b> (grandmother) making
                 <b><i>Katha</i></b> from old cotton sarees of her. She would
                 spend days stitching all the pieces of cloth together with her
@@ -135,10 +135,10 @@
           </div>
         </section>
         <section
-          class="explorationSection md:h-[500px] lg:h-[600px] xl:h-[900px] w-full flex flex-col max-w-screen-2xl justify-center items-center mx-auto"
+          class="explorationSection md:h-[500px] lg:h-[600px] xl:h-[700px] w-full flex flex-col justify-center items-center mx-auto"
         >
           <div
-            class="explorationContainer md:h-[177px] lg:h-[251px] md:w-full lg:w-[70%] mx-auto flex gap-3"
+            class="explorationContainer md:h-[177px] lg:h-[207px] md:w-full lg:w-[70%] mx-auto flex justify-between"
           >
             <img
               class="h-full image1"
@@ -168,7 +168,7 @@
           </h3>
         </section>
         <section
-          class="h-[90vh] md:h-[400px] lg:h-[500px] xl:h-[660px] 2xl:h-[700px] w-full flex"
+          class="h-[90vh] md:h-[400px] lg:h-[500px] xl:h-[660px] w-full flex"
         >
           <div class="h-full w-1/3 grid place-content-end">
             <h1
@@ -186,7 +186,7 @@
           </div>
         </section>
         <section
-          class="md:h-[575px] lg:h-[706px] xl:h-[1016px] w-full grid place-items-center max-w-screen-2xl mx-auto"
+          class="md:h-[575px] lg:h-[706px] xl:h-[1016px] w-full grid place-items-center mx-auto"
         >
           <div
             class="frontBackContainer md:h-[250px] lg:h-[320px] xl:h-[400px] md:w-full flex gap-3"
@@ -240,7 +240,7 @@
           </div>
         </section>
         <section
-          class="h-screen md:h-[500px] xl:h-[700px] 2xl:h-[800px] w-full flex justify-end items-start gap-5"
+          class="h-screen md:h-[500px] xl:h-[700px] w-full flex justify-end items-start gap-5"
         >
           <div
             class="bigfrontContainer md:w-[55%] xl:w-[800px] md:h-[315px] lg:h-[420px] xl:h-[600px] relative"
@@ -255,7 +255,7 @@
             />
           </div>
           <div
-            class="bigBackContainer xl:w-[400px] md:w-[30%] md:h-[315px] lg:h-[420px] xl:h-[600px] relative 4xl:mr-5"
+            class="bigBackContainer xl:w-[400px] md:w-[30%] md:h-[315px] lg:h-[420px] xl:h-[600px] relative"
           >
             <div
               class="h-full w-full grid place-content-end absolute border overflow-hidden"
@@ -357,65 +357,32 @@
         });
       });
 
-      gsap.to(".image5", {
-        y: -500,
-        duration: 1,
+      // Animation function for images
+      function animateImage(target, yOffset) {
+        gsap.fromTo(
+          target,
+          { y: 0 },
+          {
+            y: yOffset,
+            duration: 1,
+            scrollTrigger: {
+              trigger: ".frontBackContainer",
+              start: "center 50%",
+              end: "top 10%",
+              toggleAction: "play reverse play reverse",
+              // markers: true, // For debugging, remove in production
+              ease: "linear",
+              scrub: 1,
+            },
+          }
+        );
+      }
 
-        scrollTrigger: {
-          trigger: ".frontBackContainer",
-          start: "center 50%",
-          end: "top 10%",
-          toggleAction: "play reverse play reverse",
-          // markers: true,
-          ease: "linear",
-          scrub: 1,
-        },
-      });
-
-      gsap.to(".image6", {
-        y: -100,
-        duration: 1,
-
-        scrollTrigger: {
-          trigger: ".frontBackContainer",
-          start: "center 50%",
-          end: "top 10%",
-          toggleAction: "play reverse play reverse",
-          // markers: true,
-          ease: "linear",
-          scrub: 1,
-        },
-      });
-
-      gsap.to(".image7", {
-        y: -450,
-        duration: 1,
-
-        scrollTrigger: {
-          trigger: ".frontBackContainer",
-          start: "center 50%",
-          end: "top 10%",
-          toggleAction: "play reverse play reverse",
-          // markers: true,
-          ease: "linear",
-          scrub: 1,
-        },
-      });
-
-      gsap.to(".image8", {
-        y: -325,
-        duration: 1,
-
-        scrollTrigger: {
-          trigger: ".frontBackContainer",
-          start: "center 50%",
-          end: "top 10%",
-          toggleAction: "play reverse play reverse",
-          // markers: true,
-          ease: "linear",
-          scrub: 1,
-        },
-      });
+      // Call the animation function for each image
+      animateImage(".image5", -500);
+      animateImage(".image6", -100);
+      animateImage(".image7", -450);
+      animateImage(".image8", -325);
 
       function scrollToSection() {
         // Replace 'destinationPage.html' with the path to your destination HTML file
