@@ -295,6 +295,33 @@
         // Select the video element
         const video = document.querySelector(".heroGIF");
 
+        // Check if the video element is available
+        if (video) {
+          // Check if the video is supported by the browser
+          if (video.canPlayType) {
+            const canPlay = video.canPlayType("video/mp4");
+            if (!canPlay) {
+              console.error("Video format not supported by the browser.");
+            }
+          }
+
+          // Check if the video is loaded properly
+          if (video.readyState >= 2) {
+            // Video is loaded, play it immediately
+            playVideo();
+          } else {
+            // Video is still loading, wait for it to be ready
+            video.addEventListener("canplay", playVideo);
+          }
+        } else {
+          console.error("Video element not found.");
+        }
+
+        function playVideo() {
+          video.play().catch((error) => {
+            console.error("Error playing video:", error);
+          });
+        }
         // Remove the video element after it has finished playing
         video.addEventListener("ended", () => {
           video.parentNode.removeChild(video);
