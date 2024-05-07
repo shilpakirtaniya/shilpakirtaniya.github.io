@@ -295,6 +295,7 @@
     </section> -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
     <script>
       const loader = document.getElementById("preloader");
       const orderContent = document.querySelectorAll(".order-content");
@@ -312,12 +313,12 @@
         orderContent.forEach((content) => {
           content.style.display = "block";
         });
+
         // Select the GIF element
         setTimeout(() => {
           const heroGIF = document.querySelector(".heroGIF");
 
-          // Force reload the GIF by resetting its src attribute
-          heroGIF.src = heroGIF.src;
+          heroGIF.src = heroGIF.src; // Reload the GIF
 
           heroGIF.parentNode.removeChild(heroGIF);
 
