@@ -357,32 +357,32 @@
         });
       });
 
-      // Animation function for images
-      function animateImage(target, yOffset) {
-        gsap.fromTo(
-          target,
-          { y: 0 },
-          {
-            y: yOffset,
-            duration: 1,
-            scrollTrigger: {
-              trigger: target,
-              start: "center 50%",
-              end: "top 10%",
-              toggleAction: "play reverse play reverse",
-              // markers: true, // For debugging, remove in production
-              ease: "linear",
-              scrub: 1,
-            },
-          }
-        );
-      }
+      // // Animation function for images
+      // function animateImage(target, yOffset) {
+      //   gsap.fromTo(
+      //     target,
+      //     { y: 0 },
+      //     {
+      //       y: yOffset,
+      //       duration: 1,
+      //       scrollTrigger: {
+      //         trigger: target,
+      //         start: "center 50%",
+      //         end: "top 10%",
+      //         toggleAction: "play reverse play reverse",
+      //         // markers: true, // For debugging, remove in production
+      //         ease: "linear",
+      //         scrub: 1,
+      //       },
+      //     }
+      //   );
+      // }
 
-      // Call the animation function for each image
-      animateImage(".image5", -500);
-      animateImage(".image6", -100);
-      animateImage(".image7", -450);
-      animateImage(".image8", -325);
+      // // Call the animation function for each image
+      // animateImage(".image5", -500);
+      // animateImage(".image6", -100);
+      // animateImage(".image7", -450);
+      // animateImage(".image8", -325);
 
       function scrollToSection() {
         // Replace 'destinationPage.html' with the path to your destination HTML file
