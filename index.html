@@ -82,9 +82,9 @@
       </div>
       <div class="absolute h-full w-full flex items-end overflow-hidden">
         <div class="bottom-0 left-0 w-full z-50">
-          <video
+          <img
             class="heroGIF w-full mt-[20px]"
-            src="/src/project/imges/heroImages/ezgif.com-gif-to-mp4-converter.mp4"
+            src="/src/project/imges/heroImages/ezgif.com-animated-gif-maker(6).gif"
             alt="Your GIF"
           />
         </div>
@@ -292,40 +292,42 @@
       window.addEventListener("load", function () {
         loader.style.display = "none";
 
-        // Select the video element
-        const video = document.querySelector(".heroGIF");
+        // Select the GIF element
+        setTimeout(() => {
+          const heroGIF = document.querySelector(".heroGIF");
 
-        // Check if the video element is available
-        if (video) {
-          // Check if the video is supported by the browser
-          if (video.canPlayType) {
-            const canPlay = video.canPlayType("video/mp4");
-            if (!canPlay) {
-              console.error("Video format not supported by the browser.");
-            }
-          }
+          heroGIF.src = heroGIF.src; // Reload the GIF
 
-          // Check if the video is loaded properly
-          if (video.readyState >= 2) {
-            // Video is loaded, play it immediately
-            playVideo();
-          } else {
-            // Video is still loading, wait for it to be ready
-            video.addEventListener("canplay", playVideo);
-          }
-        } else {
-          console.error("Video element not found.");
-        }
+          heroGIF.parentNode.removeChild(heroGIF);
 
-        function playVideo() {
-          video.play().catch((error) => {
-            console.error("Error playing video:", error);
+          // Animate heroImage opacity from 0 to 1 using GSAP
+          gsap.to(".heroImage", {
+            opacity: 1,
+            duration: 0, // Instant transition
           });
-        }
-        // Remove the video element after it has finished playing
-        video.addEventListener("ended", () => {
-          video.parentNode.removeChild(video);
-        });
+
+          // Move heroImage 50px in the y direction in 0.4s using GSAP
+          gsap.to(".heroImage", {
+            y: () => {
+              // Calculate the y value based on screen width
+              const screenWidth = window.innerWidth;
+              // Define different y values based on screen width
+              if (screenWidth >= 1280) {
+                return 70; // Value for larger screens
+              } else if (screenWidth >= 1024) {
+                return 50; // Value for medium screens
+              } else if (screenWidth >= 768) {
+                return 40; // Value for smaller screens
+              } else if (screenWidth >= 640) {
+                return 30; // Value for smaller screens
+              } else if (screenWidth >= 350) {
+                return 20; // Value for smaller screens
+              }
+            },
+            duration: 0.4,
+            delay: 0.2, // Delay to start after the opacity animation
+          });
+        }, 1000); // Adjust the duration (in milliseconds) as needed
 
         // Animate heroImage opacity from 0 to 1 using GSAP
         gsap.to(".heroImage", {
