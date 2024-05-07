@@ -316,7 +316,8 @@
         setTimeout(() => {
           const heroGIF = document.querySelector(".heroGIF");
 
-          heroGIF.src = heroGIF.src; // Reload the GIF
+          // Force reload the GIF by resetting its src attribute
+          heroGIF.src = heroGIF.src;
 
           heroGIF.parentNode.removeChild(heroGIF);
 
