@@ -327,9 +327,6 @@
           video.parentNode.removeChild(video);
         });
 
-        // Play the video immediately after preloader is removed
-        video.play();
-
         // Animate heroImage opacity from 0 to 1 using GSAP
         gsap.to(".heroImage", {
           opacity: 1,
