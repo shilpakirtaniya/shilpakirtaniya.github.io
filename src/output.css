@@ -2709,6 +2709,14 @@ video {
   line-height: 15px;
 }
 
+.leading-\[8px\] {
+  line-height: 8px;
+}
+
+.leading-\[7px\] {
+  line-height: 7px;
+}
+
 .tracking-wider {
   letter-spacing: 0.05em;
 }
@@ -4920,6 +4928,10 @@ video {
   .xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .xl\:text-\[18px\] {
+    font-size: 18px;
   }
 }
 
