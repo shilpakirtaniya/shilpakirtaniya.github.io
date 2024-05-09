@@ -395,7 +395,6 @@
         });
       });
 
-      // JavaScript for changing opacity when clicking #aboutMeButton
       const aboutMeButton = document.getElementById("aboutMeButton");
       const initialText = document.querySelector(".intitialText");
       const aboutMe = document.querySelector(".aboutMe");
@@ -404,18 +403,26 @@
 
       aboutMeButton.addEventListener("click", () => {
         if (!isAboutMeVisible) {
-          initialText.style.opacity = "0";
-          initialText.style.zIndex = "20"; // Set z-index of initialText
+          // Move initialText out of view
+          initialText.style.transform = "translateY(200px)";
+          initialText.style.transition = "transform 0.7s linear";
+
+          // Move aboutMe into view
+          aboutMe.style.transform = "translateY(0)";
           aboutMe.style.opacity = "0.7";
-          aboutMe.style.zIndex = "30"; // Set z-index of aboutMe
-          aboutMe.style.transition = "opacity 0.7s, z-index 0.7s"; // Add z-index to transition
+          aboutMe.style.zIndex = "30";
+          aboutMe.style.transition = "opacity 0.7s, transform 0.7s linear";
           isAboutMeVisible = true;
         } else {
-          initialText.style.opacity = "1";
-          initialText.style.zIndex = "30"; // Set z-index of initialText back to default
+          // Move initialText back into view
+          initialText.style.transform = "translateY(0)";
+          initialText.style.transition = "transform 0.7s linear";
+
+          // Move aboutMe out of view
+          aboutMe.style.transform = "translateY(200px)";
           aboutMe.style.opacity = "0";
-          aboutMe.style.zIndex = "20"; // Set z-index of aboutMe back to default
-          aboutMe.style.transition = "opacity 0.7s, z-index 0.7s"; // Add z-index to transition
+          aboutMe.style.zIndex = "20";
+          aboutMe.style.transition = "opacity 0.7s, transform 0.7s linear";
           isAboutMeVisible = false;
         }
       });
