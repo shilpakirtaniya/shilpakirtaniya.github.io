@@ -34,8 +34,8 @@ export default function HomePage() {
         },
       })
 
-        // match original 200ms delay
-        .to({}, { duration: 0.5 })
+        // match original 1000ms delay
+        .to({}, { duration: 1 })
 
         // remove gif (react-safe)
         .call(() => setShowGif(false))
