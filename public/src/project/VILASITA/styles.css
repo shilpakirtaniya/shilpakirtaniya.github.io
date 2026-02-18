@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "sunrollregular";
+  src: url("/src/fonts/sunroll-webfont.woff2") format("woff2"),
+    url("/src/fonts/sunroll-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "calibri";
+  src: url("/src/fonts/calibri-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "calibri";
+  src: url("/src/fonts/calibri-regular-webfont.woff2") format("woff2"),
+    url("/src/fonts/calibri-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.calibri {
+  font-family: "calibri";
+}
+
+.sunroll {
+  font-family: "sunrollregular";
+}
+
+@keyframes fadeLoop {
+  0% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 0;
+  }
+  66.66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.grid1 {
+  animation: fadeLoop 6s infinite; /* 3 images * 3 seconds = 9 seconds */
+}
+
+.grid2 {
+  animation: fadeLoop 6s infinite; /* 3 images * 3 seconds = 9 seconds */
+  animation-delay: 2s; /* Delay the animation of grid2 by 3 seconds */
+}
+
+.grid3 {
+  animation: fadeLoop 6s infinite; /* 3 images * 3 seconds = 9 seconds */
+  animation-delay: 4s; /* Delay the animation of grid3 by 6 seconds */
+}
+
+.page1Main {
+  animation: image1 12s infinite;
+}
+
+.page2Main {
+  animation: image2 12s infinite;
+}
+
+.page3Main {
+  animation: image3 12s infinite;
+}
+
+.page4Main {
+  animation: image4 12s infinite;
+}
+
+.page5Main {
+  animation: image5 12s infinite;
+}
+
+.page6Main {
+  animation: image6 12s infinite;
+}
+
+.page1-1 {
+  animation: image1 12s infinite;
+  animation-delay: 150ms; /* Delay the animation of grid3 by 6 seconds */
+}
+
+.page2-1 {
+  animation: image2 12s infinite;
+  animation-delay: 150ms; /* Delay the animation of grid3 by 6 seconds */
+}
+
+.page3-1 {
+  animation: image3 12s infinite;
+  animation-delay: 150ms; /* Delay the animation of grid3 by 6 seconds */
+}
+
+.page4-1 {
+  animation: image4 12s infinite;
+  animation-delay: 150ms; /* Delay the animation of grid3 by 6 seconds */
+}
+
+.page5-1 {
+  animation: image5 12s infinite;
+  animation-delay: 150ms; /* Delay the animation of grid3 by 6 seconds */
+}
+
+.page6-1 {
+  animation: image6 12s infinite;
+  animation-delay: 150ms; /* Delay the animation of grid3 by 6 seconds */
+}
+
+.page1-2 {
+  animation: image1 12s infinite;
+  animation-delay: 300ms; /* Delay the animation of grid3 by 6 seconds */
+}
+
+.page2-2 {
+  animation: image2 12s infinite;
+  animation-delay: 300ms; /* Delay the animation of grid3 by 6 seconds */
+}
+
+.page3-2 {
+  animation: image3 12s infinite;
+  animation-delay: 300ms; /* Delay the animation of grid3 by 6 seconds */
+}
+
+.page4-2 {
+  animation: image4 12s infinite;
+  animation-delay: 300ms; /* Delay the animation of grid3 by 6 seconds */
+}
+
+.page5-2 {
+  animation: image5 12s infinite;
+  animation-delay: 300ms; /* Delay the animation of grid3 by 6 seconds */
+}
+
+.page6-2 {
+  animation: image6 12s infinite;
+  animation-delay: 300ms; /* Delay the animation of grid3 by 6 seconds */
+}

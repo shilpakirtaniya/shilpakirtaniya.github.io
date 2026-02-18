@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="/src/project/imges/heroImages/x-icon.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <title>Coral Print</title>
+    <style>
+      .backButton:hover {
+        box-shadow: 0 0 1px 1px #494f55;
+        transition: all;
+        transition-duration: 150ms;
+        transition-timing-function: ease-in-out;
+      }
+
+      .center {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+      }
+      .wave {
+        width: 5px;
+        height: 70px;
+        background: black;
+        margin: 10px;
+        animation: wave 1s linear infinite;
+        border-radius: 20px;
+      }
+      .wave:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .wave:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .wave:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .wave:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      .wave:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+      .wave:nth-child(7) {
+        animation-delay: 0.6s;
+      }
+      .wave:nth-child(8) {
+        animation-delay: 0.7s;
+      }
+      .wave:nth-child(9) {
+        animation-delay: 0.8s;
+      }
+      .wave:nth-child(10) {
+        animation-delay: 0.9s;
+      }
+
+      @keyframes wave {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="m-0 p-0">
+    <div id="preloader" class="h-full w-full absolute z-50 overflow-hidden">
+      <div class="center">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+    </div>
+    <div class="order-content">
+      <header class="h-[50px] w-full flex items-center fixed z-10 bg-white">
+        <div
+          class="container max-w-screen-xl mx-auto w-[95%] h-[80%] flex items-center justify-between"
+        >
+          <h1 class="sunroll text-lg">ShIlpa KIRtanIya</h1>
+          <ul class="text-md flex gap-10 noto">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/src/project/index.html">Project</a></li>
+            <li onclick="scrollToSection()" class="cursor-pointer">Contact</li>
+          </ul>
+        </div>
+      </header>
+      <main class="container max-w-screen-xl mx-auto pt-[50px]">
+        <section
+          class="xs:h-[200px] md:h-[300px] lg:h-[600px] w-full flex justify-center items-center"
+        >
+          <div
+            class="xs:h-[150px] md:h-[200px] lg:h-[200px] w-[500px] relative flex justify-center items-center"
+          >
+            <h1
+              class="xs:text-4xl md:text-5xl lg:text-9xl coral absolute flex text-offblue gap-5"
+            >
+              <div class="front">c</div>
+              <div class="">o</div>
+              <div class="front">r</div>
+              <div class="">a</div>
+              <div class="front">l</div>
+            </h1>
+            <h1
+              class="xs:text-3xl md:text-4xl lg:text-7xl print opacity-60 absolute"
+            >
+              print project
+            </h1>
+          </div>
+        </section>
+        <section
+          class="xs:h-[80px] sm:h-[120px] lg:h-[170px] xl:h-[200px] 2xl:h-[270px] w-full flex justify-center overflow-hidden"
+        >
+          <img
+            class="h-full scale-[120%]"
+            src="/src/project/coral print/GIF/ezgif.com-gif-maker.gif"
+            alt=""
+          />
+        </section>
+        <section
+          class="xs:h-[200px] sm:h-[240px] md:h-[400px] lg:h-[500px] xl:h-[550px] w-full flex justify-center items-end xxs:gap-[5px] xs:gap-[10px] md:gap-[15px] lg:gap-[20px] xs:mt-[70px] sm:mt-[80px] md:mt-[100px] lg:mt-[170px] xl:mt-[200px] pb-[10px]"
+        >
+          <div
+            class="xxs:w-[170px] xs:w-[220px] sm:w-[315px] md:w-[376px] xxs:h-[121px] xs:h-[157px] sm:h-[225px] md:h-[268px] lg:h-[335px] xl:h-[402px] lg:w-[470px] xl:w-[564px] overflow-hidden"
+          >
+            <img
+              class="h-full bg-cover bg-no-repeat"
+              src="/src/project/coral print/repeat 4.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="xxs:w-[170px] xs:w-[220px] sm:w-[315px] md:w-[376px] xxs:h-[121px] xs:h-[157px] sm:h-[225px] md:h-[268px] lg:h-[335px] xl:h-[402px] lg:w-[470px] xl:w-[564px] overflow-hidden"
+          >
+            <img
+              class="h-full bg-cover bg-no-repeat"
+              src="/src/project/coral print/repeat 1.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+        <section
+          class="xs:h-[200px] sm:h-[240px] md:h-[400px] lg:h-[500px] xl:h-[550px] w-full pt-[10px]"
+        >
+          <div
+            class="flex justify-center items-start xxs:gap-[5px] xs:gap-[10px] md:gap-[15px] lg:gap-[20px]"
+          >
+            <div
+              class="xxs:w-[170px] xs:w-[220px] sm:w-[315px] md:w-[376px] xxs:h-[121px] xs:h-[157px] sm:h-[225px] md:h-[268px] lg:h-[335px] xl:h-[402px] lg:w-[470px] xl:w-[564px] overflow-hidden"
+            >
+              <img
+                class="h-full bg-cover bg-no-repeat"
+                src="/src/project/coral print/repeat 3.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="xxs:w-[170px] xs:w-[220px] sm:w-[315px] md:w-[376px] xxs:h-[121px] xs:h-[157px] sm:h-[225px] md:h-[268px] lg:h-[335px] xl:h-[402px] lg:w-[470px] xl:w-[564px] overflow-hidden"
+            >
+              <img
+                class="h-full bg-contain bg-no-repeat"
+                src="/src/project/coral print/repeat 2.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <h1
+            class="xxs:w-[345px] xs:w-[450px] sm:w-[640px] md:w-[767px] lg:w-[960px] xl:w-[1148px] text-right opacity-65 xs:text-sm md:text-md lg:text-lg italic mx-auto"
+          >
+            "repeat"
+          </h1>
+        </section>
+        <section
+          class="container mx-auto xs:h-[257px] sm:h-[402px] md:h-[422px] lg:h-[563px] xl:h-[704px] w-full xs:mt-[100px] lg:mt-[200px]"
+        >
+          <div class="h-full w-full flex overflow-hidden">
+            <img
+              class="h-full"
+              src="/src/project/coral print/look 3.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+      </main>
+      <footer class="h-[400px] w-full flex items-center justify-center">
+        <div class="container h-[70%] w-full flex flex-col justify-between">
+          <div class="h-1/3 w-full flex items-center justify-center">
+            <div
+              class="h-[40px] w-[180px] rounded-lg flex justify-center items-center backButton text-md hover:text-lg transition duration-150 ease-in-out"
+            >
+              <h1 class="calibri">
+                <a href="/src/project/index.html">Back To Projects</a>
+              </h1>
+            </div>
+          </div>
+          <div
+            class="h-1/3 w-full flex flex-col items-center justify-center gap-3"
+          >
+            <div
+              class="iconsContainer h-[40px] w-[200px] justify-center flex gap-3"
+            >
+              <a
+                href="https://www.linkedin.com/in/shilpa-kirtaniya-504375231/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div
+                  class="h-full w-[40px] border border-shadedblack rounded-full flex justify-center items-center"
+                >
+                  <img
+                    class="h-[50%] hover:h-[40%] transition duration-150 ease-in-out"
+                    src="/src/icons/linkein.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="mailto:shilpakirtaniyaa@gmail.com" target="_blank">
+                <div
+                  class="h-full w-[40px] border border-shadedblack rounded-full flex justify-center items-center"
+                >
+                  <img
+                    class="h-[60%] hover:h-[40%] transition duration-150 ease-in-out"
+                    src="/src/icons/email.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="h-1/3 w-full flex flex-col items-center justify-center">
+            <p class="font-sans font-light">
+              Copyright &#169;2024 All Rights Reserved
+            </p>
+            <p class="font-sans font-light">
+              Website Developed by
+              <a href="https://vishalkirtaniya.netlify.app/" target="_blank"
+                ><b class="text-blue hover:underline">Vishal Aditya</b></a
+              >
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const loader = document.getElementById("preloader");
+      const orderContent = document.querySelectorAll(".order-content");
+
+      // Hide all order content initially
+      orderContent.forEach((content) => {
+        content.style.display = "none";
+      });
+
+      window.addEventListener("load", function () {
+        // Hide the preloader
+        loader.style.display = "none";
+
+        // Show all order content once the preloader is hidden
+        orderContent.forEach((content) => {
+          content.style.display = "block";
+        });
+      });
+
+      function scrollToSection() {
+        // Replace 'destinationPage.html' with the path to your destination HTML file
+        window.location.href = "/src/project/index.html#sectionToScroll";
+      }
+    </script>
+  </body>
+</html>

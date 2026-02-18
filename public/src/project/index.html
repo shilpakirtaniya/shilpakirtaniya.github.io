@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="/src/project/imges/heroImages/x-icon.png"
+    />
+    <title>Project</title>
+    <style>
+      body {
+        scroll-behavior: smooth;
+      }
+
+      .center {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+      }
+      .wave {
+        width: 5px;
+        height: 70px;
+        background: black;
+        margin: 10px;
+        animation: wave 1s linear infinite;
+        border-radius: 20px;
+      }
+      .wave:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .wave:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .wave:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .wave:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      .wave:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+      .wave:nth-child(7) {
+        animation-delay: 0.6s;
+      }
+      .wave:nth-child(8) {
+        animation-delay: 0.7s;
+      }
+      .wave:nth-child(9) {
+        animation-delay: 0.8s;
+      }
+      .wave:nth-child(10) {
+        animation-delay: 0.9s;
+      }
+
+      @keyframes wave {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="">
+    <div id="preloader" class="h-full w-full absolute z-50 overflow-hidden">
+      <div class="center">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+    </div>
+    <div class="container max-w-screen-xl mx-auto order-content">
+      <header class="xxs:h-[80px] sm:h-[100px] lg:h-[150px] w-full">
+        <div
+          class="container headerContainer h-full w-full flex justify-between items-center mx-auto"
+        >
+          <div class="logoContainer h-full xxs:w-1/3 w-2/5 flex items-center">
+            <div
+              class="logo xxs:h-[70px] xxs:w-[70px] sm:h-[80px] sm:w-[80px] lg:h-[100px] lg:w-[100px] rounded-full overflow-hidden"
+            >
+              <a href="/index.html">
+                <img
+                  class="w-full hover:scale-110 scale-125 transition duration-75 ease-in-out"
+                  src="/src/project/imges/heroImages/1(2).png"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+          <!-- <ul
+            class="navContainer h-full xxs:opacity-0 md:opacity-60 xxs:w-1/3 w-1/5 flex justify-center sm:gap-4 md:gap-6 lg:gap-16 items-center sm:text-xl lg:text-2xl font-noto text-black"
+          >
+            <li><a href="/index.html">Home</a></li>
+  
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1I8Q9Df-FtAgqphl6XFNaU9qvoGy6MxL5/view?usp=drive_link"
+                target="_blank"
+                >About Me</a
+              >
+            </li>
+          </ul> -->
+          <div
+            class="nameContainer h-full xxs:w-2/3 xs:w-1/3 w-2/5 items-center flex justify-end"
+          >
+            <h1
+              class="xxs:text-xl sm:text-2xl lg:text-4xl text-black text-right sunroll"
+            >
+              ShIlpa KIRtanIya
+            </h1>
+          </div>
+        </div>
+      </header>
+      <main class="container mx-auto">
+        <section
+          class="projectContainer grid sm:gap-[30px] lg:gap-[50px] xl:gap-[80px] sm:grid-cols-1 md:grid-cols-2 place-items-center mt-32"
+        >
+          <a href="/src/for IRO IRO/index.html">
+            <div
+              class="xxs:h-[201px] xxs:w-[320px] xs:h-[270px] xs:w-[430px] sm:h-[350px] sm:w-[550px] md:h-[235px] md:w-[370px] lg:h-[310px] lg:w-[487px] xl:h-[381px] xl:w-[600px] relative overflow-hidden projects"
+            >
+              <img
+                class="absolute w-full scale-105 transition duration-150 ease-in-out hover:scale-100 hover:grayscale-[90%]"
+                src="/src/project/imges/2.png"
+                alt=""
+              />
+              <div
+                class="absolute h-full w-full flex flex-col justify-center items-center"
+              >
+                <h1
+                  class="projectHeading sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-noto font-light opacity-0 text-white italic"
+                >
+                  Look book
+                </h1>
+                <h3
+                  class="font-sans font-thin text-white sm:text-sm md:text-md lg:text-lg xl:text-xl tracking-wider"
+                >
+                  | For IRO IRO |
+                </h3>
+              </div>
+              <div
+                class="h-full w-full absolute flex justify-center items-center"
+              ></div>
+            </div>
+          </a>
+
+          <a href="/src/project/Wedding card/index.html">
+            <div
+              class="xxs:h-[201px] xxs:w-[320px] xs:h-[270px] xs:w-[430px] sm:h-[350px] sm:w-[550px] md:h-[235px] md:w-[370px] lg:h-[310px] lg:w-[487px] xl:h-[381px] xl:w-[600px] relative overflow-hidden projects"
+            >
+              <img
+                class="absolute h-full scale-[150%] transition duration-150 ease-in-out hover:scale-100 hover:grayscale-[90%]"
+                src="/src/project/Wedding card/page 2/mockup 3.png"
+                alt=""
+              />
+              <div
+                class="absolute h-full w-full flex flex-col justify-center items-center"
+              >
+                <h1
+                  class="projectHeading sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-noto font-light opacity-0 text-white italic"
+                >
+                  Wedding card design
+                </h1>
+                <h3
+                  class="font-sans font-thin text-white sm:text-sm md:text-md lg:text-lg xl:text-xl tracking-wider"
+                >
+                  | Commission Work |
+                </h3>
+              </div>
+              <div
+                class="h-full w-full absolute flex justify-center items-center"
+              ></div>
+            </div>
+          </a>
+
+          <a href="/src/project/Social Media/index.html">
+            <div
+              class="xxs:h-[201px] xxs:w-[320px] xs:h-[270px] xs:w-[430px] sm:h-[350px] sm:w-[550px] md:h-[235px] md:w-[370px] lg:h-[310px] lg:w-[487px] xl:h-[381px] xl:w-[600px] relative overflow-hidden projects"
+            >
+              <img
+                class="absolute w-full scale-105 transition duration-150 ease-in-out hover:scale-100 hover:grayscale-[90%]"
+                src="/src/project/Social Media/DSC03608(1).jpg"
+                alt=""
+              />
+              <div
+                class="absolute h-full w-full flex flex-col justify-center items-center"
+              >
+                <h1
+                  class="projectHeading sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-noto font-light opacity-0 text-white italic"
+                >
+                  Social media design
+                </h1>
+                <h3
+                  class="font-sans font-thin text-white sm:text-sm md:text-md lg:text-lg xl:text-xl tracking-wider"
+                >
+                  | For IRO IRO |
+                </h3>
+              </div>
+              <div
+                class="h-full w-full absolute flex justify-center items-center"
+              ></div>
+            </div>
+          </a>
+
+          <a href="/src/project/Photography/index.html">
+            <div
+              class="xxs:h-[201px] xxs:w-[320px] xs:h-[270px] xs:w-[430px] sm:h-[350px] sm:w-[550px] md:h-[235px] md:w-[370px] lg:h-[310px] lg:w-[487px] xl:h-[381px] xl:w-[600px] relative overflow-hidden projects"
+            >
+              <img
+                class="absolute w-full scale-105 transition duration-150 ease-in-out hover:scale-100 hover:grayscale-[90%]"
+                src="/src/project/Photography/3 page/IMG_7630.jpg"
+                alt=""
+              />
+              <div
+                class="absolute h-full w-full flex flex-col justify-center items-center"
+              >
+                <h1
+                  class="projectHeading sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-noto font-light opacity-0 text-white italic"
+                >
+                  Photo book
+                </h1>
+                <h3
+                  class="font-sans font-thin text-white sm:text-sm md:text-md lg:text-lg xl:text-xl tracking-wider"
+                >
+                  | Photography | Product Styling |
+                </h3>
+              </div>
+              <div
+                class="h-full w-full absolute flex justify-center items-center"
+              ></div>
+            </div>
+          </a>
+          <a href="/src/project/VILASITA/index.html">
+            <div
+              class="xxs:h-[201px] xxs:w-[320px] xs:h-[270px] xs:w-[430px] sm:h-[350px] sm:w-[550px] md:h-[235px] md:w-[370px] lg:h-[310px] lg:w-[487px] xl:h-[381px] xl:w-[600px] relative overflow-hidden projects"
+            >
+              <img
+                class="absolute w-full scale-105 transition duration-150 ease-in-out hover:scale-100 hover:grayscale-[90%]"
+                src="/src/project/VILASITA/IMG-20230108-WA0020(1).jpg"
+                alt=""
+              />
+              <div
+                class="absolute h-full w-full flex flex-col justify-center items-center"
+              >
+                <h1
+                  class="projectHeading sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-noto font-light opacity-0 text-white italic"
+                >
+                  Vilasita
+                </h1>
+                <h3
+                  class="font-sans font-thin text-white sm:text-sm md:text-md lg:text-lg xl:text-xl tracking-wider"
+                >
+                  | Textile Design |
+                </h3>
+              </div>
+              <div
+                class="h-full w-full absolute flex justify-center items-center"
+              ></div>
+            </div>
+          </a>
+          <a href="/src/project/coral print/index.html">
+            <div
+              class="xxs:h-[201px] xxs:w-[320px] xs:h-[270px] xs:w-[430px] sm:h-[350px] sm:w-[550px] md:h-[235px] md:w-[370px] lg:h-[310px] lg:w-[487px] xl:h-[381px] xl:w-[600px] relative overflow-hidden projects"
+            >
+              <img
+                class="absolute w-full transition duration-150 ease-in-out hover:scale-100 hover:grayscale-[90%]"
+                src="/src/project/coral print/GIF/pattern 1.png"
+                alt=""
+              />
+              <div
+                class="absolute h-full w-full flex flex-col justify-center items-center"
+              >
+                <h1
+                  class="projectHeading sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-noto font-light opacity-0 text-white italic"
+                >
+                  Corals
+                </h1>
+                <h3
+                  class="font-sans font-thin text-white sm:text-sm md:text-md lg:text-lg xl:text-xl tracking-wider"
+                >
+                  | A Print Project |
+                </h3>
+              </div>
+              <div
+                class="h-full w-full absolute flex justify-center items-center"
+              ></div>
+            </div>
+          </a>
+          <a href="/src/project/surface work/index.html">
+            <div
+              class="xxs:h-[201px] xxs:w-[320px] xs:h-[270px] xs:w-[430px] sm:h-[350px] sm:w-[550px] md:h-[235px] md:w-[370px] lg:h-[310px] lg:w-[487px] xl:h-[381px] xl:w-[600px] relative overflow-hidden projects"
+            >
+              <img
+                class="absolute w-full scale-105 transition duration-150 ease-in-out hover:scale-100"
+                src="/src/project/surface work/image.png"
+                alt=""
+              />
+              <div
+                class="absolute h-full w-full flex flex-col justify-center items-center"
+              >
+                <h1
+                  class="projectHeading sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-noto font-light opacity-0 text-white italic"
+                >
+                  Surface embelishment
+                </h1>
+                <h3
+                  class="font-sans font-thin text-white sm:text-sm md:text-md lg:text-lg xl:text-xl tracking-wider"
+                >
+                  | Thread Needle Work |
+                </h3>
+              </div>
+              <div
+                class="h-full w-full absolute flex justify-center items-center"
+              ></div>
+            </div>
+          </a>
+        </section>
+      </main>
+    </div>
+
+    <footer
+      id="sectionToScroll"
+      class="h-[450px] w-full flex justify-center items-center relative overflow-hidden"
+    >
+      <div
+        class="h-full w-full absolute z-10 flex items-end items- max-w-screen-xl"
+      >
+        <div
+          class="content h-[70%] w-full container mx-auto flex flex-col items-center justify-between"
+        >
+          <h1
+            class="font-noto italic font-light sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl opacity-80 text-center"
+          >
+            Get in touch
+          </h1>
+          <div class="w-full flex flex-col items-center gap-2">
+            <h1
+              class="calibri sm:text-xs md:text-sm lg:text-md xl:text-[18px] opacity-70 w-[370px] text-center leading-[7px]"
+            >
+              If you’re keen on connecting or collaborating, feel free to reach
+              out to me via:
+            </h1>
+            <div
+              class="w-[400px] sm:text-xs md:text-xs lg:text-sm xl:text-md font-normal opacity-70 text-center"
+            >
+              <h1 class="font-[600] hover:cursor-pointer">
+                Phone:
+                <span>+91 7987387507</span>
+              </h1>
+            </div>
+          </div>
+          <div class="w-full flex flex-col items-center justify-center gap-3">
+            <div
+              class="iconsContainer h-[40px] w-[200px] justify-center flex gap-3"
+            >
+              <a
+                href="https://www.linkedin.com/in/shilpa-kirtaniya-504375231/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div
+                  class="h-full w-[40px] border border-shadedblack rounded-full flex justify-center items-center"
+                >
+                  <img
+                    class="h-[50%] hover:h-[40%] transition duration-150 ease-in-out"
+                    src="/src/icons/linkein.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="mailto:shilpakirtaniyaa@gmail.com" target="_blank">
+                <div
+                  class="h-full w-[40px] border border-shadedblack rounded-full flex justify-center items-center"
+                >
+                  <img
+                    class="h-[60%] hover:h-[40%] transition duration-150 ease-in-out"
+                    src="/src/icons/email.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="w-full flex flex-col items-center justify-center">
+            <p class="font-sans font-light">
+              Copyright &#169;2024 All Rights Reserved
+            </p>
+            <p class="font-sans font-light">
+              Website Developed by
+              <a href="https://vishalkirtaniya.netlify.app/" target="_blank"
+                ><b class="text-blue hover:underline">Vishal Aditya</b></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const loader = document.getElementById("preloader");
+      const orderContent = document.querySelectorAll(".order-content");
+
+      // Hide all order content initially
+      orderContent.forEach((content) => {
+        content.style.display = "none";
+      });
+
+      window.addEventListener("load", function () {
+        // Hide the preloader
+        loader.style.display = "none";
+
+        // Show all order content once the preloader is hidden
+        orderContent.forEach((content) => {
+          content.style.display = "block";
+        });
+      });
+    </script>
+  </body>
+</html>

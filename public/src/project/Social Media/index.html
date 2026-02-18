@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="/src/project/imges/heroImages/x-icon.png"
+    />
+    <title>Social Media</title>
+    <style>
+      .backButton:hover {
+        box-shadow: 0 0 1px 1px #494f55;
+        transition: all;
+        transition-duration: 150ms;
+        transition-timing-function: ease-in-out;
+      }
+      .center {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+      }
+      .wave {
+        width: 5px;
+        height: 70px;
+        background: black;
+        margin: 10px;
+        animation: wave 1s linear infinite;
+        border-radius: 20px;
+      }
+      .wave:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .wave:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .wave:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .wave:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      .wave:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+      .wave:nth-child(7) {
+        animation-delay: 0.6s;
+      }
+      .wave:nth-child(8) {
+        animation-delay: 0.7s;
+      }
+      .wave:nth-child(9) {
+        animation-delay: 0.8s;
+      }
+      .wave:nth-child(10) {
+        animation-delay: 0.9s;
+      }
+
+      @keyframes wave {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="m-0 p-0">
+    <div id="preloader" class="h-full w-full absolute z-50 overflow-hidden">
+      <div class="center">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+    </div>
+
+    <div class="order-content">
+      <header class="h-[50px] w-full flex items-center fixed z-10 bg-white">
+        <div
+          class="container max-w-screen-xl mx-auto w-[95%] h-[80%] flex items-center justify-between"
+        >
+          <h1 class="sunroll text-lg">ShIlpa KIRtanIya</h1>
+          <ul class="text-md flex gap-10 noto">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/src/project/index.html">Project</a></li>
+            <li onclick="scrollToSection()" class="cursor-pointer">Contact</li>
+          </ul>
+        </div>
+      </header>
+      <section
+        class="w-full md:h-[300px] xl:h-[500px] bg-header1 bg-cover bg-no-repeat flex justify-center items-end pt-[50px]"
+      >
+        <div
+          class="md:h-[300px] xl:h-[500px] md:w-[470px] lg:w-[600px] xl:w-[1050px] relative"
+        >
+          <div
+            class="h-full md:text-[150px] lg:text-[200px] xl:text-[370px] w-full flex justify-center edition overflow-hidden opacity-50 absolute"
+          >
+            <div class="h-full flex items-center s">S</div>
+            <div class="h-full flex items-center o">0</div>
+            <div class="h-full flex items-center c">C</div>
+            <div class="h-full flex items-center i">I</div>
+            <div class="h-full flex items-center a">A</div>
+            <div class="h-full flex items-center l">L</div>
+            <div class="h-full w-[8.333%]"></div>
+            <div class="h-full flex items-center m">M</div>
+            <div class="h-full flex items-center e">E</div>
+            <div class="h-full flex items-center d">D</div>
+            <div class="h-full flex items-center i">I</div>
+            <div class="h-full flex items-center a">A</div>
+          </div>
+          <div class="h-full w-full absolute flex justify-start items-center">
+            <h1
+              class="subheading1 font-calibri md:text-md lg:text-lg xl:text-xl ml-10"
+            >
+              Designed for IRO IRO
+            </h1>
+          </div>
+        </div>
+      </section>
+      <main class="container max-w-screen-2xl mx-auto">
+        <section class="h-[400px] w-full flex justify-center items-center">
+          <div class="md:w-[670px] lg:w-[900px] xl:w-[1100px] mx-auto">
+            <h1 class="text-[18px] leading-6 w-[700px]">
+              Throughout my tenure at IRO IRO, my main role centered around
+              visual/graphic design. I played a crucial part in crafting the
+              brand's social media and website graphics. This encompassed
+              designing grid layouts, individual posts, and engaging stories for
+              their social media platforms. Additionally, I contributed to the
+              development of visual elements for their website. When working on
+              the brand's social media, my primary consideration was maintaining
+              a focus on fostering community engagement while highlighting their
+              products and inspirations.
+              <p class="font-bold">
+                Below, you'll find some of the social media creatives I produced
+                for the brand.
+              </p>
+            </h1>
+          </div>
+        </section>
+        <section class="h-[150vh] w-full mx-auto">
+          <div
+            class="imageFrame md:h-[293px] md:w-[670px] lg:h-[387px] lg:w-[900px] xl:h-[473px] xl:w-[1100px] mx-auto bg-background1 bg-cover flex justify-center items-center md:gap-10 lg:gap-11 3xl:gap-28"
+          >
+            <div
+              class="revealer1 md:h-[250px] md:w-[150px] lg:h-[300px] lg:w-[180px] xl:h-[335px] xl:w-[202px] shadow-xl relative"
+            >
+              <div class="img-mask1">
+                <img
+                  class=""
+                  src="/src/project/Social Media/page 1/1/1.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="img-mask1">
+                <img
+                  class=""
+                  src="/src/project/Social Media/page 1/2/1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div
+              class="revealer2 md:h-[250px] md:w-[150px] lg:h-[300px] lg:w-[180px] xl:h-[335px] xl:w-[202px] shadow-xl relative"
+            >
+              <div class="img-mask2">
+                <img
+                  class=""
+                  src="/src/project/Social Media/page 1/1/2.png"
+                  alt=""
+                />
+              </div>
+              <div class="img-mask2">
+                <img src="/src/project/Social Media/page 1/2/2.png" alt="" />
+              </div>
+            </div>
+
+            <div
+              class="revealer3 md:h-[250px] md:w-[150px] lg:h-[300px] lg:w-[180px] xl:h-[335px] xl:w-[202px] shadow-xl relative"
+            >
+              <div class="img-mask3">
+                <img
+                  class=""
+                  src="/src/project/Social Media/page 1/1/3.png"
+                  alt=""
+                />
+              </div>
+              <div class="img-mask3">
+                <img src="/src/project/Social Media/page 1/2/3.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="secondGroup h-[100vh] w-full"></section>
+        <section
+          class="instaContainer xxs:h-[100vh] w-full flex justify-center items-center"
+        >
+          <div
+            class="instapost1 md:h-[360px] md:w-[360px] lg:h-[470px] lg:w-[470px] xl:h-[600px] xl:w-[600px] relative"
+          >
+            <img
+              class="h-full absolute md:ml-[-3px] lg:ml-[-4px] xl:ml-[-5px]"
+              src="/src/project/Social Media/page 2/73 no background.png"
+              alt=""
+            />
+            <div
+              class="h-full w-full absolute flex justify-center md:pt-[45px] lg:pt-[58px] xl:pt-[80px]"
+            >
+              <div class="h-[74%] w-[65%] relative overflow-hidden">
+                <div class="w-full h-full img-mask4">
+                  <img
+                    class="absolute w-full"
+                    src="/src/project/Social Media/page 2/left image/cover shot.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="w-full h-full img-mask4">
+                  <img
+                    class="absolute w-full"
+                    src="/src/project/Social Media/page 2/left image/2.png"
+                    alt=""
+                  />
+                </div>
+                <div class="w-full h-full img-mask4">
+                  <img
+                    class="absolute w-full"
+                    src="/src/project/Social Media/page 2/left image/3.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="instapost2 md:h-[360px] md:w-[360px] lg:h-[470px] lg:w-[470px] xl:h-[600px] xl:w-[600px] relative"
+          >
+            <img
+              class="h-full absolute md:ml-[-3px] lg:ml-[-4px] xl:ml-[-5px]"
+              src="/src/project/Social Media/page 2/73 no background.png"
+              alt=""
+            />
+            <div
+              class="h-full w-full absolute flex justify-center md:pt-[45px] lg:pt-[58px] xl:pt-[80px]"
+            >
+              <div class="h-[74%] w-[65%] relative overflow-hidden">
+                <div class="w-full h-full img-mask5">
+                  <img
+                    class="w-full absolute"
+                    src="/src/project/Social Media/page 2/right image/2 page image 1 right.png"
+                    alt=""
+                  />
+                </div>
+                <div class="w-full h-full img-mask5">
+                  <img
+                    class="w-full absolute"
+                    src="/src/project/Social Media/page 2/right image/2 page image 2 right.png"
+                    alt=""
+                  />
+                </div>
+                <div class="w-full h-full img-mask5">
+                  <img
+                    class="w-full absolute"
+                    src="/src/project/Social Media/page 2/right image/2 page image 3right.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="gridContainer md:h-[500px] lg:h-[600px] xl:h-[700px] w-full flex flex-col justify-center items-center"
+        >
+          <div class="h-[90%] w-full flex justify-center items-center">
+            <div
+              class="md:h-[350px] md:w-[350px] lg:h-[450px] lg:w-[450px] xl:h-[600px] xl:w-[600px] relative"
+            >
+              <img
+                class="grid2 absolute"
+                src="/src/project/Social Media/page 3/2 grid/final grid 1.png"
+                alt=""
+              />
+              <img
+                class="grid1 absolute"
+                src="/src/project/Social Media/page 3/1 grid/final grid 2.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="md:h-[350px] md:w-[350px] lg:h-[450px] lg:w-[450px] xl:h-[600px] xl:w-[600px] relative"
+            >
+              <img
+                class="grid4 absolute"
+                src="/src/project/Social Media/page 3/2 grid/final grid 3.png"
+                alt=""
+              />
+              <img
+                class="grid3 absolute"
+                src="/src/project/Social Media/page 3/1 grid/final grid 4.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <h1 class="text-md text-center font-thin font-sans opacity-70">
+            "Instagram Grid designed for IRO IRO showcasing their annual
+            collection PYAAR 23."
+          </h1>
+        </section>
+      </main>
+      <footer class="h-[400px] w-full flex items-center justify-center">
+        <div class="container h-[70%] w-full flex flex-col justify-between">
+          <div class="h-1/3 w-full flex items-center justify-center">
+            <div
+              class="h-[40px] w-[180px] rounded-lg flex justify-center items-center backButton text-md hover:text-lg transition duration-150 ease-in-out"
+            >
+              <h1 class="calibri">
+                <a href="/src/project/index.html">Back To Projects</a>
+              </h1>
+            </div>
+          </div>
+          <div
+            class="h-1/3 w-full flex flex-col items-center justify-center gap-3"
+          >
+            <div
+              class="iconsContainer h-[40px] w-[200px] justify-center flex gap-3"
+            >
+              <a
+                href="https://www.linkedin.com/in/shilpa-kirtaniya-504375231/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div
+                  class="h-full w-[40px] border border-shadedblack rounded-full flex justify-center items-center"
+                >
+                  <img
+                    class="h-[50%] transition duration-150 ease-in-out"
+                    src="/src/icons/linkein.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="mailto:shilpakirtaniyaa@gmail.com" target="_blank">
+                <div
+                  class="h-full w-[40px] border border-shadedblack rounded-full flex justify-center items-center"
+                >
+                  <img
+                    class="h-[60%] transition duration-150 ease-in-out"
+                    src="/src/icons/email.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="h-1/3 w-full flex flex-col items-center justify-center">
+            <p class="font-sans font-light">
+              Copyright &#169;2024 All Rights Reserved
+            </p>
+            <p class="font-sans font-light">
+              Website Developed by
+              <a href="https://vishalkirtaniya.netlify.app/" target="_blank"
+                ><b class="text-blue hover:underline">Vishal Aditya</b></a
+              >
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+      function scrollToSection() {
+        // Replace 'destinationPage.html' with the path to your destination HTML file
+        window.location.href = "/src/project/index.html#sectionToScroll";
+      }
+    </script>
+  </body>
+</html>

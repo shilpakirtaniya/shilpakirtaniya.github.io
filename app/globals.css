@@ -1,26 +1,454 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Custom screens */
+  --breakpoint-xxs: 350px;
+  --breakpoint-xs: 450px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Custom colors */
+  --color-black: #14142b;
+  --color-shadedblack: #494f55;
+  --color-blue: #1a80e6;
+  --color-mud: #c54045;
+  --color-offblue: #a9d7d5;
+  --color-grey: #eeeeee;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Font families */
+  --font-noto: "noto", serif;
+  --font-calibri: "calibri", sans-serif;
+  --font-display: "display", serif;
+  --font-sunroll: "sunrollregular", serif;
+  --font-edition: "editionregular", sans-serif;
+  --font-arial: "arialregular", sans-serif;
+  --font-amalfi: "amalfi_coastregular", cursive;
+
+  /* Background images */
+  --background-image-background1: url("/src/project/Social Media/page 1/background image.jpg");
+  --background-image-header1: url("/src/project/Social Media/cover image.jpg");
+  --background-image-vilasita: url("/src/project/VILASITA/page 5/background image.png");
+
+  /* Animations */
+  --animate-wave: wave 1s linear infinite;
+  --animate-scroll: scroll 15s linear infinite;
+  --animate-fadeLoop1: fadeLoop 6s infinite;
+  --animate-fadeLoop2: fadeLoop 6s infinite 2s;
+  --animate-fadeLoop3: fadeLoop 6s infinite 4s;
+
+  @keyframes wave {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-88vw);
+    }
+  }
+
+  @keyframes fadeLoop {
+    0% {
+      opacity: 1;
+    }
+    33.33% {
+      opacity: 0;
+    }
+    66.66% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Page 5 Image Animations */
+  @keyframes image1 {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    20%,
+    80% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes image2 {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    20%,
+    40% {
+      opacity: 1;
+    }
+    60%,
+    80% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes image3 {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    40%,
+    60% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes image4 {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    60%,
+    80% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes image5 {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    80%,
+    100% {
+      opacity: 1;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  @font-face {
+    font-family: "sunrollregular";
+    src:
+      url("/src/fonts/sunroll-webfont.woff2") format("woff2"),
+      url("/src/fonts/sunroll-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "calibri";
+    src: url("/src/fonts/calibri-regular.ttf") format("truetype");
+    src:
+      url("/src/fonts/calibri-regular-webfont.woff2") format("woff2"),
+      url("/src/fonts/calibri-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "editionregular";
+    src:
+      url("/src/fonts/edition_-webfont.woff2") format("woff2"),
+      url("/src/fonts/edition_-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "arialregular";
+    src:
+      url("/src/fonts/arial-webfont.woff2") format("woff2"),
+      url("/src/fonts/arial-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "amalfi_coastregular";
+    src:
+      url("/src/fonts/amalfi_coast-webfont.woff2") format("woff2"),
+      url("/src/fonts/amalfi_coast-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "noto";
+    src: url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "display";
+    src: url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+    font-display: swap;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply m-0 p-0 bg-white overflow-x-hidden;
+  }
+}
+
+@layer components {
+  /* Back Button */
+  .backButton {
+    @apply transition-all duration-150 ease-in-out;
+  }
+
+  .backButton:hover {
+    box-shadow: 0 0 1px 1px var(--color-shadedblack);
+  }
+
+  /* Font Utilities */
+  .font-sunroll {
+    font-family: var(--font-sunroll);
+  }
+
+  .font-noto {
+    font-family: var(--font-noto);
+  }
+
+  .font-calibri {
+    font-family: var(--font-calibri);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-edition {
+    font-family: var(--font-edition);
+  }
+
+  .font-arial {
+    font-family: var(--font-arial);
+    font-weight: 600;
+  }
+
+  .font-amalfi {
+    font-family: var(--font-amalfi);
+  }
+
+  /* Opacity Utilities */
+  .opacity-65 {
+    opacity: 0.65;
+  }
+
+  /* Scale Utilities */
+  .scale-120 {
+    scale: 1.2;
+  }
+
+  /* Transform Utilities */
+  .scale-x-\[-1\] {
+    transform: scaleX(-1);
+  }
+
+  /* Z-index Utilities */
+  .z-30 {
+    z-index: 30;
+  }
+
+  /* Scroller */
+  .scroller {
+    mask: linear-gradient(
+      90deg,
+      transparent 23%,
+      white 25%,
+      white 75%,
+      transparent 78%
+    );
+  }
+
+  /* Surface Work Specific */
+  .image5,
+  .image6,
+  .image7,
+  .image8 {
+    @apply relative overflow-hidden;
+  }
+
+  .image9,
+  .image10 {
+    @apply transition-transform duration-300;
+  }
+
+  .explorationContainer {
+    @apply flex items-center;
+  }
+
+  .frontBackContainer {
+    @apply relative;
+  }
+
+  .bigfrontContainer,
+  .bigBackContainer {
+    @apply relative overflow-hidden;
+  }
+
+  .bigfrontContainer img,
+  .bigBackContainer img {
+    @apply transition-transform duration-300;
+  }
+
+  /* Coral Print Specific */
+  .coral {
+    @apply font-arial;
+  }
+
+  .print {
+    @apply font-amalfi;
+    z-index: 10;
+  }
+
+  .front {
+    z-index: 30;
+  }
+
+  /* Vilasita Components */
+  .grid1,
+  .grid2,
+  .grid3 {
+    @apply object-cover;
+  }
+
+  .page1Main,
+  .page2Main,
+  .page3Main,
+  .page4Main,
+  .page5Main {
+    @apply object-cover;
+  }
+
+  .page1-1,
+  .page2-1,
+  .page3-1,
+  .page4-1,
+  .page5-1,
+  .page1-2,
+  .page2-2,
+  .page3-2,
+  .page4-2,
+  .page5-2 {
+    @apply object-cover;
+  }
+
+  .page1Main {
+    animation: image1 12s infinite;
+  }
+  .page2Main {
+    animation: image2 12s infinite;
+  }
+  .page3Main {
+    animation: image3 12s infinite;
+  }
+  .page4Main {
+    animation: image4 12s infinite;
+  }
+  .page5Main {
+    animation: image5 12s infinite;
+  }
+
+  .page1-1 {
+    animation: image1 12s infinite 150ms;
+  }
+  .page2-1 {
+    animation: image2 12s infinite 150ms;
+  }
+  .page3-1 {
+    animation: image3 12s infinite 150ms;
+  }
+  .page4-1 {
+    animation: image4 12s infinite 150ms;
+  }
+  .page5-1 {
+    animation: image5 12s infinite 150ms;
+  }
+
+  .page1-2 {
+    animation: image1 12s infinite 300ms;
+  }
+  .page2-2 {
+    animation: image2 12s infinite 300ms;
+  }
+  .page3-2 {
+    animation: image3 12s infinite 300ms;
+  }
+  .page4-2 {
+    animation: image4 12s infinite 300ms;
+  }
+  .page5-2 {
+    animation: image5 12s infinite 300ms;
+  }
+}
+
+@layer utilities {
+  /* Animation Utilities */
+  .animate-fadeLoop1 {
+    animation: fadeLoop 6s infinite;
+    animation-fill-mode: both;
+    will-change: opacity;
+  }
+
+  .animate-fadeLoop2 {
+    animation: fadeLoop 6s infinite 2s;
+    animation-fill-mode: both;
+    will-change: opacity;
+  }
+
+  .animate-fadeLoop3 {
+    animation: fadeLoop 6s infinite 4s;
+    animation-fill-mode: both;
+    will-change: opacity;
+  }
+
+  .animate-scroll {
+    animation: scroll 15s linear infinite;
+  }
+
+  .animatedImages {
+    mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+    overflow: hidden;
+  }
+}
+
+.background-social-media {
+  background-image: url("/src/project/Social Media/cover image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
 }

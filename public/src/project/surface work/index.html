@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surface Work</title>
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="/src/project/imges/heroImages/x-icon.png"
+    />
+    <style>
+      .backButton:hover {
+        box-shadow: 0 0 1px 1px #494f55;
+        transition: all;
+        transition-duration: 150ms;
+        transition-timing-function: ease-in-out;
+      }
+      .center {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+      }
+      .wave {
+        width: 5px;
+        height: 70px;
+        background: black;
+        margin: 10px;
+        animation: wave 1s linear infinite;
+        border-radius: 20px;
+      }
+      .wave:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .wave:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .wave:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .wave:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      .wave:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+      .wave:nth-child(7) {
+        animation-delay: 0.6s;
+      }
+      .wave:nth-child(8) {
+        animation-delay: 0.7s;
+      }
+      .wave:nth-child(9) {
+        animation-delay: 0.8s;
+      }
+      .wave:nth-child(10) {
+        animation-delay: 0.9s;
+      }
+
+      @keyframes wave {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="/src/output.css" />
+  </head>
+  <body class="">
+    <div id="preloader" class="h-full w-full absolute z-50 overflow-hidden">
+      <div class="center">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+    </div>
+
+    <div class="order-content">
+      <header class="h-[50px] w-full flex items-center fixed z-10 bg-white">
+        <div
+          class="w-[95%] container mx-auto max-w-screen-xl h-[80%] flex items-center justify-between"
+        >
+          <h1 class="sunroll text-lg">ShIlpa KIRtanIya</h1>
+          <ul class="text-md flex gap-10 noto">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/src/project/index.html">Project</a></li>
+            <li onclick="scrollToSection()" class="cursor-pointer">Contact</li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="container max-w-screen-xl mx-auto">
+        <section
+          class="xxs:h-[500px] sm:h-[700px] lg:h-[800px] xl:h-screen w-full relative overflow-hidden pt-[50px]"
+        >
+          <img
+            class="absolute xxs:left-52 xxs:scale-[290%] sm:scale-[200%] lg:scale-[170%] 2xl:scale-[170%] xl:left-40 2xl:left-[350px] left-0 bottom-0 bg-contain"
+            src="/src/project/surface work/hero page/20221120_155919.jpg"
+            alt=""
+          />
+          <div
+            class="absolute grid place-content-end xxs:p-5 lg:p-16 h-full w-full"
+          >
+            <div
+              class="xxs:h-[350px] xs:h-[270px] sm:h-[400px] md:h-[450px] lg:h-[340px] xxs:w-[220px] xs:w-[370px] sm:w-[400px] md:w-[300px] lg:w-[400px] font-sans text-white"
+            >
+              <h1 class="xxs:text-md sm:text-lg lg:text-xl mb-2 font-[500]">
+                Surface Work
+              </h1>
+              <p class="xxs:text-xs sm:text-sm md:text-md leading-4 lg:text-lg">
+                I remember my <b><i>Thamma</i></b> (grandmother) making
+                <b><i>Katha</i></b> from old cotton sarees of her. She would
+                spend days stitching all the pieces of cloth together with her
+                hands with love and a lot of patience using running stitches and
+                give it to us saying
+                <i>" eta katha na, eta amaar bhalobasha"</i> (this is not just a
+                Katha, this is my love for you). And that's how i got introduced
+                to Running stitches.
+              </p>
+              <p class="xxs:text-xs sm:text-sm md:text-lg leading-4 lg:text-xl">
+                Incorporating the same affection and patience, I made this piece
+                combined with <b><i>block print</i></b
+                >, hope you like it!!!
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="explorationSection md:h-[500px] lg:h-[600px] xl:h-[700px] w-full flex flex-col justify-center items-center mx-auto"
+        >
+          <div
+            class="explorationContainer md:h-[177px] lg:h-[207px] md:w-full lg:w-[70%] mx-auto flex justify-between"
+          >
+            <img
+              class="h-full image1"
+              src="/src/project/surface work/2nd page/1.jpg"
+              alt=""
+            />
+            <img
+              class="h-full image2"
+              src="/src/project/surface work/2nd page/2.jpg"
+              alt=""
+            />
+            <img
+              class="h-full image3 transform transition-transform scale-x-[-1]"
+              src="/src/project/surface work/2nd page/3.jpg"
+              alt=""
+            />
+            <img
+              class="h-full image4 transform transition-transform scale-x-[-1]"
+              src="/src/project/surface work/2nd page/4.jpg"
+              alt=""
+            />
+          </div>
+          <h3
+            class="md:text-md lg:text-lg xl:text-xl font-display opacity-65 italic text-left md:w-full lg:w-[70%]"
+          >
+            "exploration"
+          </h3>
+        </section>
+        <section
+          class="h-[90vh] md:h-[400px] lg:h-[500px] xl:h-[660px] w-full flex"
+        >
+          <div class="h-full w-1/3 grid place-content-end">
+            <h1
+              class="xl:w-[400px] md:w-[200px] text-right opacity-65 md:text-md lg:text-lg xl:text-xl italic font-sans mr-5"
+            >
+              “block printed sleeveless crop top with embroidery details”
+            </h1>
+          </div>
+          <div class="h-full w-2/3">
+            <img
+              class="h-full"
+              src="/src/project/surface work/3rd page/image.png"
+              alt=""
+            />
+          </div>
+        </section>
+        <section
+          class="md:h-[575px] lg:h-[706px] xl:h-[1016px] w-full grid place-items-center mx-auto"
+        >
+          <div
+            class="frontBackContainer md:h-[250px] lg:h-[320px] xl:h-[400px] md:w-full flex gap-3"
+          >
+            <div
+              class="image5 md:w-[170px] lg:w-[238px] xl:w-[299px] w-[316px] h-full"
+            >
+              <p
+                class="md:text-md lg:text-lg xl:text-xl italic opacity-65 font-sans mt-[-25px]"
+              >
+                front
+              </p>
+              <img
+                class="mt-[-2px] h-full"
+                src="/src/project/surface work/4th page/1.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[316px] md:w-[170px] lg:w-[238px] xl:w-[299px] h-full"
+            >
+              <img
+                class="image6 h-full mt-[200px]"
+                src="/src/project/surface work/4th page/2.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[316px] md:w-[170px] lg:w-[238px] xl:w-[299px] h-full"
+            >
+              <img
+                class="image7 h-full"
+                src="/src/project/surface work/4th page/3.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="image8 w-[316px] md:w-[187px] lg:w-[238px] xl:w-[299px] h-full"
+            >
+              <img
+                class=""
+                src="/src/project/surface work/4th page/4.jpg"
+                alt=""
+              />
+              <p
+                class="md:text-md lg:text-lg xl:text-xl italic opacity-65 font-sans text-right"
+              >
+                back
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="h-screen md:h-[500px] xl:h-[700px] w-full flex justify-end items-start gap-5"
+        >
+          <div
+            class="bigfrontContainer md:w-[55%] xl:w-[800px] md:h-[315px] lg:h-[420px] xl:h-[600px] relative"
+          >
+            <h1 class="text-lg italic opacity-65 font-sans m-4 absolute z-10">
+              front
+            </h1>
+            <img
+              class="absolute w-full image9"
+              src="/src/project/surface work/5th page/1.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="bigBackContainer xl:w-[400px] md:w-[30%] md:h-[315px] lg:h-[420px] xl:h-[600px] relative"
+          >
+            <div
+              class="h-full w-full grid place-content-end absolute border overflow-hidden"
+            >
+              <h1
+                class="md:text-md lg:text-lg xl:text-xl italic opacity-65 font-sans text-right m-4 z-10"
+              >
+                back
+              </h1>
+            </div>
+            <img
+              class="absolute h-full image10"
+              src="/src/project/surface work/5th page/2.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+      </main>
+      <footer class="h-[400px] w-full flex items-center justify-center">
+        <div class="container h-[70%] w-full flex flex-col justify-between">
+          <div class="h-1/3 w-full flex items-center justify-center">
+            <div
+              class="h-[40px] w-[180px] rounded-lg flex justify-center items-center backButton text-md hover:text-lg transition duration-150 ease-in-out"
+            >
+              <h1 class="calibri">
+                <a href="/src/project/index.html">Back To Projects</a>
+              </h1>
+            </div>
+          </div>
+          <div
+            class="h-1/3 w-full flex flex-col items-center justify-center gap-3"
+          >
+            <div
+              class="iconsContainer h-[40px] w-[200px] justify-center flex gap-3"
+            >
+              <a
+                href="https://www.linkedin.com/in/shilpa-kirtaniya-504375231/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div
+                  class="h-full w-[40px] border border-shadedblack rounded-full flex justify-center items-center"
+                >
+                  <img
+                    class="h-[50%] hover:h-[40%] transition duration-150 ease-in-out"
+                    src="/src/icons/linkein.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="mailto:shilpakirtaniyaa@gmail.com" target="_blank">
+                <div
+                  class="h-full w-[40px] border border-shadedblack rounded-full flex justify-center items-center"
+                >
+                  <img
+                    class="h-[60%] hover:h-[40%] transition duration-150 ease-in-out"
+                    src="/src/icons/email.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="h-1/3 w-full flex flex-col items-center justify-center">
+            <p class="font-sans font-light">
+              Copyright &#169;2024 All Rights Reserved
+            </p>
+            <p class="font-sans font-light">
+              Website Developed by
+              <a href="https://vishalkirtaniya.netlify.app/" target="_blank"
+                ><b class="text-blue hover:underline">Vishal Aditya</b></a
+              >
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const loader = document.getElementById("preloader");
+      const orderContent = document.querySelectorAll(".order-content");
+
+      // Hide all order content initially
+      orderContent.forEach((content) => {
+        content.style.display = "none";
+      });
+
+      window.addEventListener("load", function () {
+        // Hide the preloader
+        loader.style.display = "none";
+
+        // Show all order content once the preloader is hidden
+        orderContent.forEach((content) => {
+          content.style.display = "block";
+        });
+      });
+
+      // // Animation function for images
+      // function animateImage(target, yOffset) {
+      //   gsap.fromTo(
+      //     target,
+      //     { y: 0 },
+      //     {
+      //       y: yOffset,
+      //       duration: 1,
+      //       scrollTrigger: {
+      //         trigger: target,
+      //         start: "center 50%",
+      //         end: "top 10%",
+      //         toggleAction: "play reverse play reverse",
+      //         // markers: true, // For debugging, remove in production
+      //         ease: "linear",
+      //         scrub: 1,
+      //       },
+      //     }
+      //   );
+      // }
+
+      // // Call the animation function for each imge
+      // animateImage(".image5", -500);
+      // animateImage(".image6", -100);
+      // animateImage(".image7", -450);
+      // animateImage(".image8", -325);
+
+      function scrollToSection() {
+        // Replace 'destinationPage.html' with the path to your destination HTML file
+        window.location.href = "/src/project/index.html#sectionToScroll";
+      }
+    </script>
+  </body>
+</html>
