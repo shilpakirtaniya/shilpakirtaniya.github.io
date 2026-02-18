@@ -126,18 +126,7 @@ export default function CoralsPage() {
         </main>
 
         {/* Footer with Back Button */}
-        <footer className="h-[400px] w-full flex items-center justify-center">
-          <div className="container h-[70%] w-full flex flex-col justify-between">
-            <div className="h-1/3 w-full flex items-center justify-center">
-              <Link href="/projects">
-                <div className="h-[40px] w-[180px] rounded-lg flex justify-center items-center backButton text-md hover:text-lg transition duration-150 ease-in-out hover:shadow-[0_0_1px_1px_#494F55]">
-                  <h1 className="font-calibri">Back To Projects</h1>
-                </div>
-              </Link>
-            </div>
-            <ProjectFooter />
-          </div>
-        </footer>
+       <ProjectFooter />
       </div>
     </>
   );
