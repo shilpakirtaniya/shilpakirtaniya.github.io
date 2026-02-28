@@ -47,7 +47,13 @@ export default function MailerSection() {
           className='flex-1 -translate-y-1/2 flex items-center justify-center opacity-60 hover:opacity-100 disabled:opacity-20 transition'
         >
           <span className='w-10 h-10 rounded-full border border-[#4a3b2f] flex items-center justify-center'>
-            ←
+            <Image
+              src='/right-arrow.svg'
+              alt='Previous'
+              width={15}
+              height={15}
+              className='rotate-180'
+            />
           </span>
         </button>
         {/* VIEWPORT */}
@@ -60,7 +66,7 @@ export default function MailerSection() {
               <div
                 key={i}
                 onClick={() => setActiveIndex(i)}
-                className='relative h-[550px] flex items-start justify-center overflow-hidden'
+                className='relative h-[550px] flex items-start justify-center overflow-hidden hover:cursor-pointer'
               >
                 <Image
                   src={`/src/project/weekly-edit/emailers/${src}`}
@@ -80,7 +86,7 @@ export default function MailerSection() {
           className='flex-1 -translate-y-1/2 flex items-center justify-center opacity-60 hover:opacity-100 disabled:opacity-20 transition'
         >
           <span className='w-10 h-10 rounded-full border border-[#4a3b2f] flex items-center justify-center'>
-            →
+            <Image src='/right-arrow.svg' alt='Next' width={15} height={15} />
           </span>
         </button>
       </div>
