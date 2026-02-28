@@ -109,7 +109,7 @@ export default function ProjectsPage() {
       <main className='container mx-auto px-4'>
         <section className='projectContainer flex justify-center mt-32'>
           {/* LEFT COLUMN */}
-          <div className='flex flex-col items-end gap-[80px] pr-[40px]'>
+          <div className='flex flex-col items-end gap-[40px] pr-[20px]'>
             {leftProjects.map((project) => (
               <div key={project.id} className='w-full max-w-[600px]'>
                 <ProjectCard {...project} />
@@ -118,7 +118,7 @@ export default function ProjectsPage() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className='flex flex-col items-start gap-[80px] pl-[40px]'>
+          <div className='flex flex-col items-start gap-[40px] pl-[20px]'>
             {rightProjects.map((project) => (
               <div key={project.id} className='w-full max-w-[600px]'>
                 <ProjectCard {...project} />
