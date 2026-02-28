@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 interface MailerViewerProps {
   mailers: string[];
@@ -16,6 +16,7 @@ export default function MailerViewer({
 }: MailerViewerProps) {
   const [current, setCurrent] = useState(startIndex);
   const [loading, setLoading] = useState(true);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const prev = () => {
     if (current > 0) {
@@ -30,6 +31,12 @@ export default function MailerViewer({
       setCurrent((i) => i + 1);
     }
   };
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = 0;
+    }
+  }, [current]);
 
   return (
     <div
@@ -65,7 +72,7 @@ export default function MailerViewer({
         onClick={(e) => e.stopPropagation()} // ✅ prevent close inside
       >
         {/* Scroll area */}
-        <div className='h-full w-full overflow-y-auto p-6'>
+        <div className='h-full w-full overflow-y-auto p-6' ref={scrollRef}>
           {loading && (
             <div className='w-full h-[600px] animate-pulse rounded bg-gray-200' />
           )}

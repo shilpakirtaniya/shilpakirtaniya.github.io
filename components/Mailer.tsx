@@ -15,11 +15,22 @@ const MAILERS = [
   "mailer-8.png",
 ];
 
+const SMALL_MAILERS = [
+  "mailer-1-small.png",
+  "mailer-2-small.png",
+  "mailer-3-small.png",
+  "mailer-4-small.png",
+  "mailer-5-small.png",
+  "mailer-6-small.jpg",
+  "mailer-7-small.png",
+  "mailer-8-small.png",
+];
+
 const VISIBLE_COUNT = 4;
 
 export default function MailerSection() {
   const [index, setIndex] = useState(0);
-  const [activeMailer, setActiveMailer] = useState<string | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const maxIndex = Math.max(0, MAILERS.length - VISIBLE_COUNT);
 
@@ -45,10 +56,10 @@ export default function MailerSection() {
             className='grid grid-flow-col auto-cols-[22.9%] gap-7 transition-transform duration-500 ease-linear'
             style={{ transform: `translateX(-${index * 25}%)` }}
           >
-            {MAILERS.map((src, i) => (
+            {SMALL_MAILERS.map((src, i) => (
               <div
                 key={i}
-                onClick={() => setActiveMailer(src)}
+                onClick={() => setActiveIndex(i)}
                 className='relative h-[550px] flex items-start justify-center overflow-hidden'
               >
                 <Image
@@ -88,11 +99,11 @@ export default function MailerSection() {
       </div>
 
       {/* Popup for active mailer */}
-      {activeMailer && (
+      {activeIndex !== null && (
         <MailerViewer
           mailers={MAILERS}
-          startIndex={MAILERS.indexOf(activeMailer)}
-          onClose={() => setActiveMailer(null)}
+          startIndex={activeIndex}
+          onClose={() => setActiveIndex(null)}
         />
       )}
     </section>
