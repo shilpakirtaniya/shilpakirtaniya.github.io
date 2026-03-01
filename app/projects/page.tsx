@@ -16,8 +16,6 @@ const projects = [
     imageSrc: "/src/project/imges/2.png",
     title: "Look book",
     subtitle: "| For IRO IRO |",
-    imageScale: "scale-105",
-    imagePosition: "w-full",
   },
   {
     id: 2,
@@ -25,8 +23,6 @@ const projects = [
     imageSrc: "/src/project/Wedding card/page 2/mockup 3.png",
     title: "Wedding card design",
     subtitle: "| Commission Work |",
-    imageScale: "scale-105",
-    imagePosition: "h-full",
   },
   {
     id: 3,
@@ -34,8 +30,6 @@ const projects = [
     imageSrc: "/src/project/Social Media/DSC03608(1).jpg",
     title: "Social media design",
     subtitle: "| For IRO IRO |",
-    imageScale: "scale-105",
-    imagePosition: "w-full",
   },
   {
     id: 4,
@@ -43,8 +37,6 @@ const projects = [
     imageSrc: "/src/project/Photography/3 page/IMG_7630.jpg",
     title: "Photo book",
     subtitle: "| Photography | Product Styling |",
-    imageScale: "scale-105",
-    imagePosition: "w-full",
   },
   {
     id: 5,
@@ -52,8 +44,6 @@ const projects = [
     imageSrc: "/src/project/VILASITA/IMG-20230108-WA0020(1).jpg",
     title: "Vilasita",
     subtitle: "| Textile Design |",
-    imageScale: "scale-105",
-    imagePosition: "w-full",
   },
   {
     id: 6,
@@ -61,8 +51,6 @@ const projects = [
     imageSrc: "/src/project/coral print/GIF/pattern 1.png",
     title: "Corals",
     subtitle: "| A Print Project |",
-    imageScale: "scale-105",
-    imagePosition: "w-full",
   },
   {
     id: 7,
@@ -70,17 +58,20 @@ const projects = [
     imageSrc: "/src/project/surface work/image.png",
     title: "Surface embelishment",
     subtitle: "| Thread Needle Work |",
-    imageScale: "scale-105",
-    imagePosition: "w-full",
   },
   {
     id: 8,
     href: "/projects/weekly-edits",
     imageSrc: "/src/project/weekly-edit/hero-2.jpg",
-    title: "Surface embelishment",
+    title: "Weekly Edits",
     subtitle: "| Newsletters |",
-    imageScale: "scale-105",
-    imagePosition: "w-full",
+  },
+  {
+    id: 9,
+    href: "/projects/launch-campaign",
+    imageSrc: "/src/project/launch-campaign/hero.png",
+    title: "Launch Campaign",
+    subtitle: "| Branding |",
   },
 ];
 
@@ -106,21 +97,21 @@ export default function ProjectsPage() {
   return (
     <>
       <Header />
-      <main className='container mx-auto px-4'>
-        <section className='projectContainer flex justify-center mt-32'>
+      <main className="container mx-auto px-4">
+        <section className="projectContainer flex justify-center mt-32">
           {/* LEFT COLUMN */}
-          <div className='flex flex-col items-end gap-[40px] pr-[20px]'>
+          <div className="flex flex-col items-end gap-[40px] pr-[20px]">
             {leftProjects.map((project) => (
-              <div key={project.id} className='w-full max-w-[600px]'>
+              <div key={project.id} className="w-full max-w-[600px]">
                 <ProjectCard {...project} />
               </div>
             ))}
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className='flex flex-col items-start gap-[40px] pl-[20px]'>
+          <div className="flex flex-col items-start gap-[40px] pl-[20px]">
             {rightProjects.map((project) => (
-              <div key={project.id} className='w-full max-w-[600px]'>
+              <div key={project.id} className="w-full max-w-[600px]">
                 <ProjectCard {...project} />
               </div>
             ))}
