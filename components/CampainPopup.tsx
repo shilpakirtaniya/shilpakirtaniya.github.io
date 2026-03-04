@@ -1,7 +1,6 @@
 "use client";
 
 import { JSX, useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import Instagram from "./Instagram";
 import Banner from "./Banner";
 import Ads from "./Ads";
@@ -12,11 +11,15 @@ export type SectionKey = 1 | 2 | 3 | 4;
 interface CampainPopupProps {
   activeSection: SectionKey | null;
   setActiveSection: React.Dispatch<React.SetStateAction<SectionKey | null>>;
+  // Added optional width prop
+  width?: string;
 }
 
 export default function CampainPopup({
   activeSection,
   setActiveSection,
+  // Default value set to "w-[50vw]"
+  width = "w-[50vw]",
 }: CampainPopupProps) {
   const [loading, setLoading] = useState(true);
   const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -28,15 +31,12 @@ export default function CampainPopup({
     4: <Emailers />,
   };
 
-  // reset scroll + loading on section change
   useEffect(() => {
     if (activeSection !== null) {
       setLoading(true);
       if (scrollRef.current) {
         scrollRef.current.scrollTop = 0;
       }
-
-      // fake load delay (replace later if needed)
       const t = setTimeout(() => setLoading(false), 300);
       return () => clearTimeout(t);
     }
@@ -47,30 +47,13 @@ export default function CampainPopup({
   return (
     <div
       className="fixed inset-0 z-50 bg-black/80 flex items-center justify-evenly"
-      onClick={() => setActiveSection(null)} // click outside closes
+      onClick={() => setActiveSection(null)}
     >
-      {/* LEFT NAV (kept for visual symmetry) */}
-      <button
-        disabled
-        className="w-10 h-10 rounded-full bg-white shadow
-                   flex items-center justify-center
-                   opacity-30 cursor-default"
-      >
-        <Image
-          src="/right-arrow.svg"
-          alt="Prev"
-          width={15}
-          height={15}
-          className="rotate-180"
-        />
-      </button>
-
-      {/* VIEWER (EXACT SAME CONTAINER) */}
+      {/* VIEWER - Now uses the dynamic width prop */}
       <div
-        className="relative w-[50vw] h-[90vh] bg-white rounded-lg shadow-2xl overflow-hidden"
+        className={`relative ${width} h-[90vh] bg-white rounded-lg shadow-2xl overflow-hidden`}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Scroll area */}
         <div className="h-full w-full overflow-y-auto" ref={scrollRef}>
           {loading && (
             <div className="w-full h-[600px] animate-pulse rounded bg-gray-200" />
@@ -79,16 +62,6 @@ export default function CampainPopup({
           {!loading && sections[activeSection]}
         </div>
       </div>
-
-      {/* RIGHT NAV (kept for visual symmetry) */}
-      <button
-        disabled
-        className="w-10 h-10 rounded-full bg-white shadow
-                   flex items-center justify-center
-                   opacity-30 cursor-default"
-      >
-        <Image src="/right-arrow.svg" alt="Next" width={15} height={15} />
-      </button>
     </div>
   );
 }
