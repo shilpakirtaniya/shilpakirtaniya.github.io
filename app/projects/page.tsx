@@ -15,7 +15,7 @@ const projects = [
     href: "/projects/launch-campaign",
     imageSrc: "/src/project/launch-campaign/launch-campain.jpeg",
     title: "Launch Campaign",
-    subtitle: "| Branding |",
+    subtitle: "| F/W'25 |",
   },
   {
     id: 2,
