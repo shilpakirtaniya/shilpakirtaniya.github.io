@@ -24,6 +24,10 @@ const LaunchCampainPage = () => {
           className="absolute inset-0 h-full w-full object-contain z-10 pointer-events-none"
         />
       </div>
+      <div className="middlerow w-full bg-eggshell relative py-6">
+        <img src="/src/project/launch-campaign/eggshell.png" alt="Eggshell" className=" w-full object-cover"/>
+        <img src="/src/project/launch-campaign/eggshell-text.png" alt="eggshell text"  className="absolute z-10 top-10 scale-50"/>
+      </div>
       <div className="buttons h-206.25 w-full bg-gunmetal-green p-10 flex gap-10">
         {/* LEFT BIG */}
         <div
