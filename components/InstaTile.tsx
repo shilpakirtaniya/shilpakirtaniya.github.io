@@ -29,7 +29,7 @@ export default function InstaTile({ src, index }: InstaTileProps) {
           onLoadingComplete={() => setLoaded(true)}
           className={`
             object-cover transition-all duration-300
-            ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"}
+            ${loaded ? "opacity-100 scale-100 hover:scale-105 transition-transform duration-300" : "opacity-0 scale-105"}
           `}
         />
       )}
@@ -46,7 +46,7 @@ export default function InstaTile({ src, index }: InstaTileProps) {
           className={`
             absolute inset-0 h-full w-full object-cover
             transition-all duration-300
-            ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"}
+            ${loaded ? "opacity-100 scale-100 hover:scale-105 transition-transform duration-300" : "opacity-0 scale-105"}
           `}
         />
       )}
