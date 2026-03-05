@@ -34,5 +34,6 @@ export default function ProjectCard({
         </div>
       </div>
     </Link>
+    
   );
 }
