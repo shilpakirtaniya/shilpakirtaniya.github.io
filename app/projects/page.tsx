@@ -12,25 +12,26 @@ import ProjectCard from "@/components/ProjectCard";
 const projects = [
   {
     id: 1,
+    href: "/projects/launch-campaign",
+    imageSrc: "/src/project/launch-campaign/launch-campain.jpeg",
+    title: "Launch Campaign",
+    subtitle: "| Branding |",
+  },
+  {
+    id: 2,
+    href: "/projects/weekly-edits",
+    imageSrc: "/src/project/weekly-edit/hero-2.jpg",
+    title: "Weekly Edits",
+    subtitle: "| Newsletters |",
+  },
+  {
+    id: 3,
     href: "/projects/lookbook",
     imageSrc: "/src/project/imges/2.png",
     title: "Look book",
     subtitle: "| For IRO IRO |",
   },
-  {
-    id: 2,
-    href: "/projects/wedding-card",
-    imageSrc: "/src/project/Wedding card/page 2/mockup 3.png",
-    title: "Wedding card design",
-    subtitle: "| Commission Work |",
-  },
-  {
-    id: 3,
-    href: "/projects/social-media",
-    imageSrc: "/src/project/Social Media/DSC03608(1).jpg",
-    title: "Social media design",
-    subtitle: "| For IRO IRO |",
-  },
+
   {
     id: 4,
     href: "/projects/photo-book",
@@ -40,38 +41,24 @@ const projects = [
   },
   {
     id: 5,
+    href: "/projects/social-media",
+    imageSrc: "/src/project/Social Media/DSC03608(1).jpg",
+    title: "Social media design",
+    subtitle: "| For IRO IRO |",
+  },
+  {
+    id: 6,
     href: "/projects/vilasita",
     imageSrc: "/src/project/VILASITA/IMG-20230108-WA0020(1).jpg",
     title: "Vilasita",
     subtitle: "| Textile Design |",
   },
   {
-    id: 6,
-    href: "/projects/coral-print",
-    imageSrc: "/src/project/coral print/GIF/pattern 1.png",
-    title: "Corals",
-    subtitle: "| A Print Project |",
-  },
-  {
     id: 7,
-    href: "/projects/surface-embellishment",
-    imageSrc: "/src/project/surface work/image.png",
-    title: "Surface embelishment",
-    subtitle: "| Thread Needle Work |",
-  },
-  {
-    id: 8,
-    href: "/projects/weekly-edits",
-    imageSrc: "/src/project/weekly-edit/hero-2.jpg",
-    title: "Weekly Edits",
-    subtitle: "| Newsletters |",
-  },
-  {
-    id: 9,
-    href: "/projects/launch-campaign",
-    imageSrc: "/src/project/launch-campaign/hero.png",
-    title: "Launch Campaign",
-    subtitle: "| Branding |",
+    href: "/projects/wedding-card",
+    imageSrc: "/src/project/Wedding card/page 2/mockup 3.png",
+    title: "Wedding card design",
+    subtitle: "| Commission Work |",
   },
 ];
 

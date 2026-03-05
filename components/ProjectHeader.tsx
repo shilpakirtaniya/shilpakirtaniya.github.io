@@ -5,7 +5,7 @@ const ProjectHeader = () => {
   return (
     <header className="h-[50px] w-full flex items-center fixed z-20 bg-white">
         <div className="container max-w-screen-xl mx-auto w-[95%] h-[80%] flex items-center justify-between">
-          <h1 className="font-sunroll text-lg">ShIlpa KIRtanIya</h1>
+          <Link className="font-sunroll text-lg" href="/projects">ShIlpa KIRtanIya</Link>
           <ul className="text-md flex gap-10 font-noto">
             <li>
               <Link href="/">Home</Link>

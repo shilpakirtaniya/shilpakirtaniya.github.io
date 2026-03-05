@@ -30,11 +30,11 @@ export default function Instagram() {
 
         <div className="flex items-center gap-6">
           {/* SEASON BADGE */}
-          <div className="w-20 h-20 rounded-full bg-[#8c7a5a] flex items-center justify-center text-center text-sm font-light">
+          <div className="w-22 h-22 rounded-full flex items-center justify-center text-center text-sm font-light ">
             <img
               src="/src/project/launch-campaign/buttons/Instagram/logo.png"
               alt="Season Badge"
-              className="w-full h-full"
+              className=""
             />
           </div>
 

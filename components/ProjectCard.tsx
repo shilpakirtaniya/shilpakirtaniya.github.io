@@ -19,13 +19,10 @@ export default function ProjectCard({
   return (
     <Link href={href}>
       <div className="xxs:h-[201px] xxs:w-[320px] xs:h-[270px] xs:w-[430px] sm:h-[350px] sm:w-[550px] md:h-[235px] md:w-[370px] lg:h-[310px] lg:w-[487px] xl:h-[381px] xl:w-[600px] relative overflow-hidden projects group cursor-pointer">
-        <Image
+        <img
           className={`absolute w-full scale-105 transition duration-150 ease-in-out group-hover:scale-100 group-hover:grayscale-[90%]`}
           src={imageSrc}
-          alt={title}
-          width={600}
-          height={381}
-          style={{ objectFit: "cover" }}
+
         />
         <div className="absolute h-full w-full flex flex-col justify-center items-center">
           <h1 className="projectHeading sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-noto font-light opacity-0 group-hover:opacity-100 text-white italic transition-opacity duration-150 ease-in-out">
