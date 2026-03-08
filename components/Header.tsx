@@ -12,7 +12,7 @@ export default function Header() {
             <Link href="/">
               <Image
                 className="w-full hover:scale-110 scale-125 transition duration-75 ease-in-out"
-                src="/src/project/imges/heroImages/1(2).png"
+                src="/src/project/imges/heroImages/logo2.png"
                 alt="Logo"
                 width={100}
                 height={100}

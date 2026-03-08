@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Project - ShIlpa KIRtanIya',
-  description: 'Portfolio projects by ShIlpa KIRtanIya',
+  title: 'Shilpa Kirtaniya',
+  description: 'Portfolio by Shilpa Kirtaniya',
   icons: {
-    icon: '/src/project/imges/heroImages/x-icon.png',
+    icon: '/src/project/imges/heroImages/hero2.ico',
   },
 };
 
