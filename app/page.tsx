@@ -28,6 +28,16 @@ export default function HomePage() {
 
   const CYCLE_WORDS = ["space", "Portfolio", "Work"];
 
+  const GIF_DURATION_MS = 3000; // ← change this to your gif's actual duration
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowGif(false);
+    }, GIF_DURATION_MS);
+
+    return () => clearTimeout(timer);
+  }, []); // runs once on mount
+
   /* ---------------- HERO TIMELINE ---------------- */
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -155,7 +165,7 @@ export default function HomePage() {
       });
     };
 
-    const timeout = setTimeout(runCycle, 5000);
+    const timeout = setTimeout(runCycle, 2000);
     return () => clearTimeout(timeout);
   }, [currentIndex, isAnimating]);
 
@@ -222,7 +232,7 @@ export default function HomePage() {
             style={{
               height: "1.1em",
               minWidth: "7ch",
-              verticalAlign: "bottom",
+              verticalAlign: "center",
             }}
           >
             {/* current word */}
