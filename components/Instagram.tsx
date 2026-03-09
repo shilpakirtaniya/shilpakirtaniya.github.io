@@ -60,10 +60,34 @@ export default function Instagram() {
 
         {/* INSTAGRAM TABS */}
         <div className="flex justify-evenly gap-16 mt-14 border-b border-white/20 pb-4">
-          <span className="opacity-100 border-b-2 pb-2">▦</span>
-          <span className="opacity-50">▶</span>
-          <span className="opacity-50">▢</span>
-          <span className="opacity-50">▢</span>
+          <span className="opacity-100 border-b-2 pb-2">
+            <img
+              src="/src/project/launch-campaign/buttons/Instagram/icons-05.png"
+              alt=""
+              className="h-6"
+            />
+          </span>
+          <span className="opacity-80">
+            <img
+              src="/src/project/launch-campaign/buttons/Instagram/icons-06.png"
+              alt=""
+              className="h-6"
+            />
+          </span>
+          <span className="opacity-80">
+            <img
+              src="/src/project/launch-campaign/buttons/Instagram/icons-07.png"
+              alt=""
+              className="h-6"
+            />
+          </span>
+          <span className="opacity-80">
+            <img
+              src="/src/project/launch-campaign/buttons/Instagram/icons-08.png"
+              alt=""
+              className="h-6"
+            />
+          </span>
         </div>
       </div>
 
