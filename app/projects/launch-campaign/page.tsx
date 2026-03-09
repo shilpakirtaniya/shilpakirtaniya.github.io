@@ -25,8 +25,16 @@ const LaunchCampainPage = () => {
         />
       </div>
       <div className="middlerow w-full bg-eggshell relative py-6">
-        <img src="/src/project/launch-campaign/eggshell.png" alt="Eggshell" className=" w-full object-cover"/>
-        <img src="/src/project/launch-campaign/eggshell-text.png" alt="eggshell text"  className="absolute z-10 top-10 scale-50"/>
+        <img
+          src="/src/project/launch-campaign/eggshell.png"
+          alt="Eggshell"
+          className=" w-full object-cover"
+        />
+        <img
+          src="/src/project/launch-campaign/eggshell-text.png"
+          alt="eggshell text"
+          className="absolute z-10 top-10 scale-50"
+        />
       </div>
       <div className="buttons h-206.25 w-full bg-gunmetal-green p-10 flex gap-10">
         {/* LEFT BIG */}
@@ -37,7 +45,7 @@ const LaunchCampainPage = () => {
           <img
             src="/src/project/launch-campaign/buttons/button-1.png"
             alt=""
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover scale-105 hover:scale-100 transition duration-150 ease-in-out"
           />
         </div>
 
@@ -51,7 +59,7 @@ const LaunchCampainPage = () => {
             <img
               src="/src/project/launch-campaign/buttons/button-2.png"
               alt=""
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover scale-105 hover:scale-100 transition duration-150 ease-in-out"
             />
           </div>
 
@@ -64,7 +72,7 @@ const LaunchCampainPage = () => {
               <img
                 src="/src/project/launch-campaign/buttons/button-3.png"
                 alt=""
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover scale-105 hover:scale-100 transition duration-150 ease-in-out"
               />
             </div>
 
@@ -75,15 +83,17 @@ const LaunchCampainPage = () => {
               <img
                 src="/src/project/launch-campaign/buttons/button-4.png"
                 alt=""
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover scale-105 hover:scale-100 transition duration-150 ease-in-out"
               />
             </div>
           </div>
         </div>
       </div>
-      <CampainPopup activeSection={activeSection} setActiveSection={setActiveSection} />
+      <CampainPopup
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+      />
       <ProjectFooter />
-
     </>
   );
 };
