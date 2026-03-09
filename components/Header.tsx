@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Header() {
   return (
-    <header className="xxs:h-[80px] sm:h-[100px] lg:h-[150px] w-full container max-w-screen-xl mx-auto">
+    <header className="xxs:h-[80px] sm:h-[100px] lg:h-[150px] w-full container max-w-screen-xl mx-auto bg-bgsand">
       <div className="container headerContainer h-full w-full flex justify-between items-center mx-auto">
         <div className="logoContainer h-full xxs:w-1/3 w-2/5 flex items-center">
           <div className="logo xxs:h-[70px] xxs:w-[70px] sm:h-[80px] sm:w-[80px] lg:h-[100px] lg:w-[100px] rounded-full overflow-hidden">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Preloader from "@/components/Preloader";
@@ -67,6 +67,7 @@ const rightProjects = projects.filter((_, i) => i % 2 !== 0);
 
 export default function ProjectsPage() {
   const [isLoading, setIsLoading] = useState(true);
+  const preloaderRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Simulate loading or wait for resources
@@ -78,13 +79,24 @@ export default function ProjectsPage() {
   }, []);
 
   if (isLoading) {
-    return <Preloader />;
+    return (
+      <div
+        ref={preloaderRef}
+        className="absolute inset-0 z-50 flex items-center justify-center bg-bgsand"
+      >
+        <div className="flex gap-2">
+          {Array.from({ length: 10 }).map((_, i) => (
+            <span key={i} className="wave" />
+          ))}
+        </div>
+      </div>
+    );
   }
 
   return (
-    <>
+    <div className="bg-bgsand">
       <Header />
-      <main className="container mx-auto px-4">
+      <main className="container mx-auto px-4 bg-bgsand">
         <section className="projectContainer flex justify-center mt-32">
           {/* LEFT COLUMN */}
           <div className="flex flex-col items-end gap-[40px] pr-[20px]">
@@ -106,6 +118,6 @@ export default function ProjectsPage() {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

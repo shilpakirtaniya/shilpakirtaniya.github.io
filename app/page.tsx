@@ -165,7 +165,7 @@ export default function HomePage() {
       });
     };
 
-    const timeout = setTimeout(runCycle, 2000);
+    const timeout = setTimeout(runCycle, 1000);
     return () => clearTimeout(timeout);
   }, [currentIndex, isAnimating]);
 
@@ -178,7 +178,7 @@ export default function HomePage() {
   return (
     <section
       ref={rootRef}
-      className="heroSection relative h-screen w-full overflow-hidden bg-bgsand "
+      className="heroSection relative h-screen w-full overflow-hidden bg-bgsand"
     >
       {/* PRELOADER */}
       <div
@@ -195,7 +195,7 @@ export default function HomePage() {
       {/* ── TOP BAR ── */}
       <div
         ref={topBarRef}
-        className="absolute top-0 left-0 right-0 z-30 flex items-start justify-between px-8 pt-6"
+        className="absolute top-0 left-0 right-0 z-30 flex items-start justify-between px-30 pt-6"
         style={{ opacity: 0 }}
       >
         {/* Logo / Icon — top left */}
@@ -211,10 +211,10 @@ export default function HomePage() {
 
         {/* Name — top right */}
         <p
-          className="font-sunroll text-2xl tracking-wide font-bold"
+          className="font-arial text-2xl tracking-wide"
           style={{ color: "#3B2A1A" }}
         >
-          <span className="font-extrabold">Shilpa</span> Kirtaniya
+          <span className="font-bold">Shilpa</span> <span className="font-normal">Kirtaniya</span>
         </p>
       </div>
 
@@ -299,7 +299,7 @@ export default function HomePage() {
       {/* ── BOTTOM BAR ── */}
       <div
         ref={bottomBarRef}
-        className="absolute bottom-0 left-0 right-0 z-30 flex items-end justify-between px-10 pb-10"
+        className="absolute bottom-0 left-0 right-0 z-30 flex items-end justify-between px-30 pb-10"
         style={{ opacity: 0 }}
       >
         {/* ── LEFT: bio text (initial + about) ── */}
@@ -310,10 +310,10 @@ export default function HomePage() {
             className="absolute bottom-0"
             style={{ color: "#3B2A1A" }}
           >
-            <p className="font-noto font-bold text-xl leading-snug">
+            <p className="font-arial font-bold text-xl leading-snug">
               I'm Shilpa,
             </p>
-            <p className="font-noto font-light text-lg leading-snug opacity-80 mt-0.5">
+            <p className="font-arial font-light text-lg leading-snug opacity-80 mt-0.5">
               a communication and visual designer with 2+ years of experience
               turning ideas into campaigns, editorial layouts, and digital
               visuals.
@@ -326,10 +326,10 @@ export default function HomePage() {
             className="absolute bottom-0 opacity-0 translate-y-[10px]"
             style={{ color: "#3B2A1A" }}
           >
-            <p className="font-noto font-bold text-xl leading-snug">
+            <p className="font-arial font-bold text-xl leading-snug">
               Hi there!
             </p>
-            <p className="font-noto text-lg leading-snug opacity-80 mt-1">
+            <p className="font-arial text-lg font-medium leading-snug opacity-80 mt-1">
               I’m Shilpa, a communication and visual designer who enjoys
               translating ideas into clear and engaging visuals. I studied
               design at the National Institute of Fashion Technology (NIFT),
@@ -338,7 +338,7 @@ export default function HomePage() {
               campaigns, digital content, and motion design, building visual
               systems that help brands communicate consistently and creatively.
             </p>
-            <p className="font-noto text-lg mt-2 opacity-80">
+            <p className="font-arial font-medium text-lg mt-2 opacity-80">
               To view my resume, click{" "}
               <a
                 href="https://drive.google.com/file/d/1I8Q9Df-FtAgqphl6XFNaU9qvoGy6MxL5/view"
@@ -358,14 +358,14 @@ export default function HomePage() {
             href="/projects"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-noto text-2xl font-semibold hover:underline underline-offset-4"
+            className="font-arial text-2xl font-semibold hover:underline underline-offset-4"
             style={{ color: "#3B2A1A" }}
           >
             Projects
           </a>
           <button
             onClick={toggleAbout}
-            className="font-noto text-2xl font-semibold hover:underline underline-offset-4 text-right"
+            className="font-arial text-2xl font-semibold hover:underline underline-offset-4 text-right"
             style={{ color: "#3B2A1A" }}
           >
             About{" "}
