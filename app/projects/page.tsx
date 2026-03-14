@@ -80,23 +80,14 @@ export default function ProjectsPage() {
 
   if (isLoading) {
     return (
-      <div
-        ref={preloaderRef}
-        className="absolute inset-0 z-50 flex items-center justify-center bg-bgsand"
-      >
-        <div className="flex gap-2">
-          {Array.from({ length: 10 }).map((_, i) => (
-            <span key={i} className="wave" />
-          ))}
-        </div>
-      </div>
+      <Preloader />
     );
   }
 
   return (
-    <div className="bg-bgsand">
+    <div className="">
       <Header />
-      <main className="container mx-auto px-4 bg-bgsand">
+      <main className="container mx-auto px-4">
         <section className="projectContainer flex justify-center mt-32">
           {/* LEFT COLUMN */}
           <div className="flex flex-col items-end gap-[40px] pr-[20px]">
