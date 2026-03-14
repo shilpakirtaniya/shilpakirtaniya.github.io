@@ -5,7 +5,7 @@ const ProjectHeader = () => {
   return (
     <header className="h-[50px] w-full flex items-center fixed z-20 bg-white">
       <div className="container max-w-screen-xl mx-auto w-[95%] h-[80%] flex items-center justify-between">
-        <Link className="font-arial text-2xl" href="/projects">
+        <Link className="font-sunroll text-2xl" href="/projects">
           <span className="font-bold">Shilpa</span>{" "}
           <span className="font-normal">Kirtaniya</span>
         </Link>

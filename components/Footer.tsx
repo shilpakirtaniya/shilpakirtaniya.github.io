@@ -12,8 +12,8 @@ export default function Footer() {
         <div className="h-[70%] w-full flex flex-col items-center justify-between text-center">
 
           {/* TITLE */}
-          <h1 className="font-arial font-light text-3xl md:text-4xl opacity-80">
-            Get in <span className="font-bold">touch</span>
+          <h1 className="font-sunroll text-3xl md:text-4xl opacity-80">
+            Get in <span className="">touch</span>
           </h1>
 
           {/* DESCRIPTION */}
@@ -58,7 +58,7 @@ export default function Footer() {
 
           {/* COPYRIGHT */}
           <div className="text-sm font-light opacity-80">
-            <p>Copyright ©2024 All Rights Reserved</p>
+            <p>Copyright ©2026 All Rights Reserved</p>
           </div>
 
         </div>

@@ -45,7 +45,7 @@ const ProjectFooter = () => {
 
         {/* COPYRIGHT */}
         <div className="h-1/3 w-full flex flex-col items-center justify-center">
-          <p className="font-sans font-light">© 2024 All rights reserved</p>
+          <p className="font-sans font-light">© 2026 All rights reserved</p>
         </div>
       </div>
     </footer>
