@@ -12,7 +12,7 @@ export default function Header() {
             <Link href="/">
               <Image
                 className="w-full hover:scale-110 scale-125 transition duration-75 ease-in-out"
-                src="/src/project/imges/heroImages/logo.png"
+                src="/src/project/imges/heroImages/logo1.png"
                 alt="Logo"
                 width={100}
                 height={100}
@@ -21,7 +21,7 @@ export default function Header() {
           </div>
         </div>
         <div className="nameContainer h-full xxs:w-2/3 xs:w-1/3 w-2/5 items-center flex justify-end">
-          <h1 className="xxs:text-xl sm:text-2xl lg:text-4xl text-black text-right font-sunroll">
+          <h1 className="xxs:text-xl sm:text-2xl lg:text-7xl text-black text-right font-gillsans">
             <span className="font-bold">Shilpa</span>{" "}
             <span className="font-normal">Kirtaniya</span>
           </h1>

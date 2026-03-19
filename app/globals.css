@@ -31,6 +31,7 @@
   --font-edition: "editionregular", sans-serif;
   --font-arial: "arialregular", sans-serif;
   --font-amalfi: "amalfi_coastregular", cursive;
+  --font-gillsans: "gillsans", serif;
 
   /* Background images */
   --background-image-background1: url("/src/project/Social Media/page 1/background image.jpg");
@@ -202,6 +203,18 @@
   @font-face {
     font-family: "display";
     src: url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "gillsans";
+    src:
+      url("/src/fonts/Gill-Sans-MT-Ext-Condensed-Bold-Regular.woff2")
+        format("woff2"),
+      url("/src/fonts/Gill-Sans-MT-Ext-Condensed-Bold-Regular.woff")
+        format("woff");
+    font-weight: bold;
+    font-style: bold;
     font-display: swap;
   }
 

@@ -85,7 +85,7 @@ export default function ProjectsPage() {
   }
 
   return (
-    <div className="">
+    <div className="bg-projects">
       <Header />
       <main className="container mx-auto px-4">
         <section className="projectContainer flex justify-center mt-32">
