@@ -118,7 +118,7 @@ export default function HomePage() {
   return (
     <section
       ref={rootRef}
-      className="heroSection relative h-screen w-full bg-[url('/src/project/imges/heroImages/bg-texture.png')]"
+      className="heroSection relative h-screen w-full"
     >
       {/* PRELOADER */}
       <div
@@ -145,7 +145,7 @@ export default function HomePage() {
               alt="Hero"
               width={1920}
               height={600}
-              className="w-[90%] mx-auto"
+              className="w-[85%] mx-auto"
               priority
             />
           </div>
@@ -198,7 +198,7 @@ export default function HomePage() {
                     building visual systems that help brands communicate
                     consistently and creatively.
                   </h1>
-                  <h1 className="text-xl font-noto">
+                  <h1 className="text-xl font-arial font-light">
                     To view my resume, click{" "}
                     <a
                       href="https://drive.google.com/file/d/1FaRV13bqvDCHJzgeS2Vz_vBqtzJSldTy/view?usp=drivesdk"
