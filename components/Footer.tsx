@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="h-[70%] w-full flex flex-col items-center justify-between text-center">
 
           {/* TITLE */}
-          <h1 className="font-sunroll text-3xl md:text-4xl opacity-80">
+          <h1 className="font-arial text-3xl md:text-4xl opacity-80">
             Get in <span className="">touch</span>
           </h1>
 
