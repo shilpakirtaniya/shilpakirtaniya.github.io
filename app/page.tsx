@@ -21,7 +21,7 @@ export default function HomePage() {
       const tl = gsap.timeline();
 
       gsap.set(heroImageWrapperRef.current, {
-        opacity: 0,
+        opacity: 1,
         y: 0,
       });
 
@@ -37,9 +37,6 @@ export default function HomePage() {
         // match original 1000ms delay
         .to({}, { duration: 1 })
 
-        // remove gif (react-safe)
-        .call(() => setShowGif(false))
-
         // show hero image instantly
         .to(heroImageWrapperRef.current, {
           opacity: 1,
@@ -54,16 +51,12 @@ export default function HomePage() {
         })
 
         // heading
-        .from(
-          ".shilpaHeading",
-          {
-            y: 300,
-            opacity: 0,
-            scale: 0.3,
-            duration: 0.7,
-          },
-          "+=0.6",
-        )
+        .from(".shilpaHeading", {
+          y: 300,
+          opacity: 0,
+          scale: 0.3,
+          duration: 0.5,
+        })
 
         // subheading
         .from(
@@ -84,14 +77,14 @@ export default function HomePage() {
   const toggleAbout = () => {
     if (!aboutOpen) {
       gsap.to(initialTextRef.current, {
-        y: 200,
+        y: 300,
         duration: 0.7,
         ease: "linear",
       });
 
       gsap.to(aboutTextRef.current, {
         y: 0,
-        opacity: 0.7,
+        opacity: 1,
         duration: 0.7,
         ease: "linear",
       });
@@ -123,7 +116,10 @@ export default function HomePage() {
   }
 
   return (
-    <section ref={rootRef} className="heroSection relative h-screen w-full">
+    <section
+      ref={rootRef}
+      className="heroSection relative h-screen w-full bg-[url('/src/project/imges/heroImages/bg-texture.png')]"
+    >
       {/* PRELOADER */}
       <div
         ref={preloaderRef}
@@ -139,27 +135,13 @@ export default function HomePage() {
       {/* CONTENT */}
       <div className="absolute inset-0">
         <div className="relative h-full w-full overflow-hidden">
-          {/* HERO GIF */}
-          {showGif && (
-            <div className="absolute bottom-0 w-full z-50 pointer-events-none bg-white">
-              <Image
-                src="/src/project/imges/heroImages/cover-page-animation2.gif"
-                alt="Hero GIF"
-                width={1920}
-                height={600}
-                className="w-[90%] mx-auto mt-[20px]"
-                priority
-              />
-            </div>
-          )}
-
           {/* HERO IMAGE */}
           <div
             ref={heroImageWrapperRef}
             className="absolute bottom-0 w-full z-20 mt-[20px] pointer-events-none"
           >
             <Image
-              src="/src/project/imges/heroImages/5.png"
+              src="/src/project/imges/heroImages/sketch.png"
               alt="Hero"
               width={1920}
               height={600}
@@ -172,12 +154,17 @@ export default function HomePage() {
           <div className="absolute inset-0 flex flex-col">
             {/* HEADINGS */}
             <div className="h-1/2 w-full flex flex-col justify-center items-center z-10">
-              <h1 className="shilpaHeading xxs:text-5xl xl:text-8xl font-sunroll text-mud">
-                ShIlpa KIRtanIya
-              </h1>
-              <h1 className="xxs:text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl text-center font-noto font-light italic text-mud xxs:w-[300px] xl:w-[550px] opacity-65 leading-5 shilpaSubHeading">
-                Visual designer, Textile designer, Photographer
-              </h1>
+              <Image
+                src="/src/project/imges/heroImages/name-01.png"
+                alt="name"
+                className="mt-20 shilpaHeading"
+                width={900}
+                height={100}
+              />
+              <div className="xxs:text-lg sm:text-sm md:text-md lg:text-2xl xl:text-3xl font-arial font-light text-mud xxs:w-[300px] xl:w-[900px] leading-5 shilpaSubHeading flex justify-between lowercase px-7">
+                <span>Communication &</span>
+                <span className="text-end">Visual Designer</span>
+              </div>
             </div>
 
             {/* LINKS CONTAINER */}
@@ -186,33 +173,35 @@ export default function HomePage() {
               <div className="h-full w-1/2 flex justify-start items-end relative">
                 <div
                   ref={initialTextRef}
-                  className="h-[80%] w-[70%] flex flex-col justify-end items-start absolute p-16 text-mud opacity-70"
+                  className="h-[80%] w-[55%] flex flex-col justify-end items-start absolute p-16 text-mud"
                 >
-                  <h1 className="text-2xl font-noto font-bold">Hi there!</h1>
-                  <h1 className="text-xl font-noto w-[90%] z-20">
-                    I’m Shilpa, an interdisciplinary designer with a passion for
-                    visual design, textile design, illustrations, and
-                    photography.
+                  <h1 className="text-2xl font-arial font-bold">I’m Shilpa,</h1>
+                  <h1 className="text-lg font-arial w-[90%] font-light z-20">
+                    A communication and visual designer with 2+ years of
+                    experience turning ideas into campaigns, editorial layouts,
+                    and digital visuals.
                   </h1>
                 </div>
 
                 <div
                   ref={aboutTextRef}
-                  className="h-[80%] w-[70%] text-mud flex flex-col opacity-0 justify-end items-start absolute p-16 translate-y-[200px]"
+                  className="h-[80%] w-[55%] text-mud flex flex-col opacity-0 justify-end items-start absolute p-16 translate-y-[200px]"
                 >
-                  <h1 className="text-4xl font-noto font-bold">Hi there!</h1>
-                  <h1 className="text-xl font-noto w-[90%]">
-                    I’m Shilpa, an interdisciplinary designer with a passion for
-                    visual design, textile design, illustrations, and
-                    photography. With close to a year of experience at the
-                    zero-waste fashion brand IRO IRO, I've refined my skills in
-                    visual design, product styling, textile design, and
-                    photography.
+                  <h1 className="text-2xl font-arial font-bold">Hello,</h1>
+                  <h1 className="text-lg font-arial w-[90%] font-light">
+                    I am a communication and visual designer who enjoys translating
+                    ideas into clear and engaging visuals. I studied design at
+                    the National Institute of Fashion Technology (NIFT), where I
+                    developed a strong interest in visual storytelling and
+                    editorial layouts. With 2+ years of experience, I’ve worked
+                    across campaigns, digital content, and motion design,
+                    building visual systems that help brands communicate
+                    consistently and creatively.
                   </h1>
                   <h1 className="text-xl font-noto">
                     To view my resume, click{" "}
                     <a
-                      href="https://drive.google.com/file/d/1I8Q9Df-FtAgqphl6XFNaU9qvoGy6MxL5/view"
+                      href="https://drive.google.com/file/d/1FaRV13bqvDCHJzgeS2Vz_vBqtzJSldTy/view?usp=drivesdk"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline z-50 font-bold"
@@ -229,13 +218,13 @@ export default function HomePage() {
                   href="/projects"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="xxs:text-xs xs:text-sm sm:text-md md:text-ld lg:text-2xl font-noto text-mud hover:underline z-30"
+                  className="xxs:text-xs xs:text-sm sm:text-md md:text-ld lg:text-2xl font-arial text-mud hover:underline z-30"
                 >
                   Work
                 </a>
                 <button
                   onClick={toggleAbout}
-                  className="xxs:text-xs xs:text-sm sm:text-md md:text-ld lg:text-2xl font-noto text-mud hover:underline z-30"
+                  className="xxs:text-xs xs:text-sm sm:text-md md:text-ld lg:text-2xl font-arial text-mud hover:underline z-30"
                 >
                   About me
                 </button>
